@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>InNovaIdeia - Assessoria em Tecnologia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .jumbotron {
+      background-color: #f8f9fa;
+      color: #333;
+      padding: 50px 25px;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+    }
+    .section-title {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .values {
+      background-color: #f8f9fa;
+      padding: 30px 0;
+    }
+    /* Estilos do chatbot */
+    #chatbox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      display: none;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background-color: white;
+      z-index: 1000;
+    }
+    #chat-log {
+      height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    #user-input {
+      width: calc(100% - 50px);
+      padding: 5px;
+      margin: 5px;
+    }
+
+    #send-btn {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cabeçalho e Navegação -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">InNovaIdeia</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#valores">Valores</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Seção de Apresentação -->
+<div class="jumbotron text-center">
+  <h1>Bem-vindo à InNovaIdeia</h1>
+  <p>Assessoria em Tecnologia para o Futuro dos Negócios</p>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalHistoria">Saiba Mais</button>
+</div>
+
+<!-- Modal -->
+<div id="modalHistoria" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Conteúdo do Modal -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Nossa História</h4>
+      </div>
+      <div class="modal-body">
+            <p>A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com ampla experiência em tecnologia desde 2009. Com conhecimentos em diversas linguagens de programação, como Java, JavaScript, Python e C, nossa equipe está pronta para enfrentar os desafios do mercado digital.</p>
+            <p>Ao longo dos anos, a InNovaIdeia se destacou por sua abordagem personalizada, proporcionando soluções inovadoras para empresas de diversos segmentos. Nosso objetivo é sempre entregar a melhor experiência tecnológica, alinhada às necessidades dos nossos clientes.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Seção de Serviços -->
+<div class="container-fluid" id="servicos">
+  <div class="section-title">
+    <h2>Serviços</h2>
+    <p>Oferecemos uma ampla gama de serviços para atender suas necessidades tecnológicas.</p>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Consultoria em TI</h3>
+      <p>Oferecemos suporte completo para otimizar a infraestrutura de TI da sua empresa.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Desenvolvimento de Software</h3>
+      <p>Criação de soluções personalizadas para atender às necessidades do seu negócio.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Treinamentos e Workshops</h3>
+      <p>Capacitação técnica para equipes com foco em tecnologias emergentes.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Seção Sobre Nós -->
+<div class="container-fluid" id="sobre">
+  <div class="section-title">
+    <h2>Sobre Nós</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Nossa História</h3>
+      <p>A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com ampla experiência em tecnologia desde 2009. Com conhecimentos em diversas linguagens de programação, como Java, JavaScript, Python e C, nossa equipe está pronta para enfrentar os desafios do mercado digital.</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Nossa Missão</h3>
+      <p>Proporcionar soluções inovadoras e sustentáveis, promovendo o crescimento e a competitividade dos nossos clientes no ambiente digital.</p>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-sm-6">
+      <h3>Nosso Diferencial</h3>
+      <p>Combinamos nossa experiência técnica com uma abordagem personalizada para cada cliente. Nosso objetivo é oferecer soluções tecnológicas que impulsionem o sucesso dos negócios, sempre utilizando as melhores práticas do mercado.</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Equipe Especializada</h3>
+      <p>Contamos com uma equipe de especialistas em diversas áreas, prontos para oferecer consultoria e suporte em todas as etapas dos projetos. Estamos sempre atualizados com as mais recentes tecnologias e metodologias de desenvolvimento.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Seção de Valores -->
+<div class="container-fluid values" id="valores">
+  <div class="section-title">
+    <h2>Nossos Valores</h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-3 text-center">
+      <h4>Inovação</h4>
+      <p>Buscamos sempre soluções criativas e eficazes para cada desafio.</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <h4>Transparência</h4>
+      <p>Prezamos pela honestidade e clareza em todas as nossas relações.</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <h4>Comprometimento</h4>
+      <p>Estamos comprometidos com o sucesso dos nossos clientes.</p>
+    </div>
+    <div class="col-sm-3 text-center">
+      <h4>Excelência</h4>
+      <p>Trabalhamos com excelência para oferecer os melhores resultados.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Seção de Contato -->
+<div class="container-fluid" id="contato">
+  <div class="section-title">
+    <h2>Contato</h2>
+    <p>Entre em contato conosco para saber mais sobre nossos serviços.</p>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Informações de Contato</h3>
+      <p>Email: innovaideia2023@gmail.com</p>
+<p>Telefone: (16) 99311-7529</p>
+      <p>Endereço: Rua Vergílio José Gomes,2652,Franca, São Paulo</p>
+    </div>
+    <div class="col-sm-6">
+      <h3>Formulário de Contato</h3>
+      <form action="https://example.com/submit_form" method="POST">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem:</label>
+          <textarea class="form-control" id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <!-- Botão para abrir/fechar o chatbot -->
+  <!-- Botão para abrir o chat -->
+  <button id="toggle-chatbox" class="btn btn-info" data-toggle="modal" data-target="#chatModal">
+    <i class="glyphicon glyphicon-comment"></i> 💬
+  </button>
+
+  <!-- Modal do chatbot -->
+  <div id="chatModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chatbot InNovaIdeia</h4>
+        </div>
+        <div class="modal-body">
+          <div id="chat-log"></div>
+          <input type="text" id="user-input" placeholder="Digite sua mensagem aqui...">
+          <button id="send-btn" class="btn btn-primary">Enviar</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-center">
+  <p>&copy; 2024 InNovaIdeia. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Chatbot -->
+<div id="chatbox">
+  <div id="chat-log"></div>
+  <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
+  <button id="send-btn" class="btn btn-primary">Enviar</button>
+</div>
+
+<!-- Script para o chatbot -->
+  <script>
+    // JSON com as respostas do chatbot// JSON com as respostas do chatbot, agora com mais informações
+const responses = [
+  { 
+    keywords: ["serviço", "serviços", "consultoria", "desenvolvimento"], 
+    response: "Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes." 
+  },
+  { 
+    keywords: ["sobre", "empresa", "história", "fundação"], 
+    response: "A InNovaIdeia é uma empresa de tecnologia e inovação, fundada para oferecer soluções tecnológicas sob medida, com foco em inovação, automação e inteligência artificial." 
+  },
+  { 
+    keywords: ["contato", "falar", "suporte", "ajuda"], 
+    response: "Você pode nos contatar pelo email: innovaideia2023@gmail.com ou através do telefone (16) 99311-7529 para suporte e consultas." 
+  },
+  { 
+    keywords: ["projetos", "soluções", "parceria", "implementação"], 
+    response: "Desenvolvemos soluções tecnológicas personalizadas para cada projeto, sempre alinhadas às necessidades de nossos clientes. Entre em contato para discutir uma parceria." 
+  },
+  { 
+    keywords: ["inovação", "tecnologia", "tendências", "avançada"], 
+    response: "Estamos sempre atualizados com as últimas tendências tecnológicas, como inteligência artificial, automação de processos e soluções em nuvem para negócios." 
+  },
+  { 
+    keywords: ["valores", "missão", "visão", "ética"], 
+    response: "Nossos valores incluem inovação contínua, transparência nos negócios, compromisso com a excelência e ética em todas as interações com nossos clientes e parceiros." 
+  },
+  { 
+    keywords: ["treinamento", "cursos", "capacitação", "workshops"], 
+    response: "Oferecemos treinamentos e workshops voltados para a capacitação de equipes, com temas como programação, gestão de projetos ágeis, e uso de tecnologias emergentes." 
+  },
+  { 
+    keywords: ["clientes", "cases", "portfólio", "testemunhos"], 
+    response: "Trabalhamos com clientes de diversos setores, oferecendo soluções inovadoras que agregam valor. Confira nossos cases de sucesso para saber mais sobre os projetos que já desenvolvemos." 
+  },
+  { 
+    keywords: ["equipe", "profissionais", "time", "especialistas"], 
+    response: "Nossa equipe é formada por especialistas altamente capacitados, com experiência em várias áreas da tecnologia, como desenvolvimento de software, IA, e gestão de dados." 
+  },
+  { 
+    keywords: ["segurança", "dados", "privacidade", "proteção"], 
+    response: "Priorizamos a segurança e privacidade dos dados em todos os nossos projetos, aplicando as melhores práticas e soluções para garantir a proteção da informação." 
+  },
+  { 
+    keywords: ["preços", "custo", "valor", "orçamento"], 
+    response: "Nossos serviços são personalizados, e o valor depende das necessidades específicas de cada projeto. Entre em contato para solicitar um orçamento sem compromisso." 
+  },
+  { 
+    keywords: ["parceiros", "colaboração", "networking"], 
+    response: "Trabalhamos em colaboração com parceiros estratégicos para fornecer as melhores soluções tecnológicas. Se você deseja se tornar um parceiro, entre em contato!" 
+  },
+  { 
+    keywords: ["prazo", "entrega", "deadlines", "projeto"], 
+    response: "Trabalhamos com prazos claros e definidos, sempre com o compromisso de entregar os projetos no tempo acordado e com a máxima qualidade." 
+  },
+  { 
+    keywords: ["tecnologias", "ferramentas", "stack", "frameworks"], 
+    response: "Utilizamos uma ampla variedade de tecnologias e frameworks, como Python, JavaScript, Flask, React, Bootstrap, e muito mais para atender às necessidades dos projetos." 
+  },
+  { 
+    keywords: ["carreiras", "emprego", "oportunidades", "trabalho"], 
+    response: "Estamos sempre em busca de talentos para integrar nossa equipe. Confira nossas vagas abertas e oportunidades de carreira em nosso site ou entre em contato conosco para mais informações." 
+  },
+  { 
+    keywords: ["suporte técnico", "manutenção", "atendimento", "helpdesk"], 
+    response: "Oferecemos suporte técnico dedicado e serviços de manutenção para garantir que seus sistemas operem com máxima eficiência. Fale conosco para agendar uma consulta." 
+  },
+  { 
+    keywords: ["futuro", "estratégia", "objetivos", "plano"], 
+    response: "Nosso foco é continuar sendo referência em tecnologia e inovação, buscando sempre antecipar as necessidades do mercado e proporcionar soluções de ponta." 
+  },
+  { 
+    keywords: ["metodologias", "scrum", "ágil", "gestão de projetos"], 
+    response: "Adotamos metodologias ágeis, como Scrum e Kanban, para garantir a gestão eficiente de projetos, com entregas contínuas e alinhamento às expectativas dos clientes." 
+  },
+  { 
+    keywords: ["feedback", "satisfação", "opinião", "avaliação"], 
+    response: "A opinião dos nossos clientes é fundamental para nós. Sempre buscamos melhorar nossos serviços com base em feedbacks e avaliações constantes." 
+  },
+  { 
+    keywords: ["sustentabilidade", "responsabilidade", "meio ambiente", "ecologia"], 
+    response: "Estamos comprometidos com práticas sustentáveis, implementando soluções que minimizam o impacto ambiental e promovem o uso consciente da tecnologia." 
+  },
+  { 
+    keywords: ["consultoria estratégica", "análise de mercado", "planejamento", "transformação digital"], 
+    response: "Oferecemos consultoria estratégica para auxiliar na transformação digital das empresas, com análise de mercado e planejamento para implementação de novas tecnologias." 
+  },
+  { 
+    keywords: ["testes", "qualidade", "garantia", "validação"], 
+    response: "Realizamos testes rigorosos de qualidade e validação para garantir que as soluções entregues atendam aos mais altos padrões de desempenho e segurança." 
+  },
+  { 
+    keywords: ["customização", "personalização", "adaptação", "flexibilidade"], 
+    response: "Nossas soluções são altamente personalizáveis, desenvolvidas de acordo com as necessidades específicas de cada cliente, garantindo flexibilidade e adaptação ao seu negócio." 
+  },
+  { 
+    keywords: ["infraestrutura", "servidores", "cloud", "hospedagem"], 
+    response: "Oferecemos soluções completas de infraestrutura, desde a gestão de servidores locais até o desenvolvimento e hospedagem em ambientes de cloud computing." 
+  },
+  { 
+    keywords: ["cultura", "ambiente de trabalho", "valores corporativos", "diversidade"], 
+    response: "Na InNovaIdeia, promovemos um ambiente de trabalho inclusivo e colaborativo, onde a diversidade de ideias e experiências é valorizada e impulsiona nossa inovação contínua." 
+  },
+  { 
+    keywords: ["parceria estratégica", "alianças", "cooperação", "joint venture"], 
+    response: "Estabelecemos parcerias estratégicas e alianças com outras empresas e instituições, fortalecendo nossa capacidade de entregar soluções tecnológicas inovadoras e robustas." 
+  },
+  { 
+    keywords: ["fidelidade", "relacionamento", "clientes recorrentes", "programa de fidelidade"], 
+    response: "Valorizamos nossos clientes recorrentes e oferecemos programas de fidelidade que garantem vantagens exclusivas e suporte contínuo para projetos de longo prazo." 
+  },
+  { 
+    keywords: ["inovação contínua", "pesquisa", "desenvolvimento", "R&D"], 
+    response: "Investimos constantemente em pesquisa e desenvolvimento para explorar novas tecnologias e soluções inovadoras, garantindo que nossos clientes sempre estejam à frente do mercado." 
+  },
+  { 
+    keywords: ["melhorias contínuas", "otimização", "eficiência", "performance"], 
+    response: "Nosso foco está em entregar soluções que sejam não apenas funcionais, mas também otimizadas para performance, escalabilidade e eficiência a longo prazo." 
+  },
+  { 
+    keywords: ["escalabilidade", "crescimento", "expansão", "futuro"], 
+    response: "Desenvolvemos soluções escaláveis que acompanham o crescimento de sua empresa, garantindo que suas necessidades tecnológicas sejam atendidas conforme seu negócio se expande." 
+  },
+  { 
+    keywords: ["suporte contínuo", "atualizações", "manutenção preventiva", "monitoramento"], 
+    response: "Oferecemos suporte contínuo com serviços de manutenção preventiva e monitoramento, assegurando que seus sistemas estejam sempre atualizados e funcionando perfeitamente." 
+  },
+  { 
+    keywords: ["user experience", "UX", "UI", "experiência do usuário"], 
+    response: "Desenvolvemos interfaces intuitivas e focadas na experiência do usuário (UX), garantindo que seus clientes interajam de maneira eficiente e agradável com suas soluções." 
+  },
+  { 
+    keywords: ["responsabilidade social", "projetos sociais", "comunidade", "impacto social"], 
+    response: "Apoiamos iniciativas de responsabilidade social e buscamos ativamente participar de projetos que gerem impacto positivo nas comunidades onde atuamos." 
+  },
+  { 
+    keywords: ["competitividade", "mercado", "diferencial", "vantagem"], 
+    response: "Nossa expertise em tecnologia e inovação oferece uma vantagem competitiva aos nossos clientes, permitindo que eles se destaquem no mercado com soluções diferenciadas." 
+  },
+  { 
+    keywords: ["transformação digital", "digitalização", "automação", "inovação tecnológica"], 
+    response: "Ajudamos empresas a navegar pela transformação digital, automatizando processos e implementando inovações tecnológicas que impulsionam a eficiência e a competitividade." 
+  },
+  { 
+    keywords: ["consultoria em IA", "inteligência artificial", "machine learning", "automação inteligente"], 
+    response: "Fornecemos consultoria especializada em inteligência artificial e machine learning, desenvolvendo soluções de automação inteligente para otimizar operações e melhorar a tomada de decisões." 
+  },
+  { 
+    keywords: ["big data", "análise de dados", "data science", "gestão de dados"], 
+    response: "Oferecemos soluções em análise de dados e ciência de dados (Data Science), ajudando as empresas a tomar decisões mais informadas com base em big data e insights precisos." 
+  },
+  { 
+    keywords: ["metodologias de inovação", "design thinking", "lean startup", "prototipagem"], 
+    response: "Utilizamos metodologias como Design Thinking e Lean Startup para promover a inovação dentro das empresas, desde a concepção de ideias até a prototipagem rápida de soluções." 
+  },
+  { 
+    keywords: ["prototipagem", "prototipagem rápida", "MVP", "produto mínimo viável"], 
+    response: "Desenvolvemos protótipos rápidos e produtos mínimos viáveis (MVP) para validar ideias de negócios e tecnologias com agilidade, permitindo testes e ajustes antes de grandes investimentos." 
+  },
+  { 
+    keywords: ["desenvolvimento ágil", "scrum", "kanban", "sprints"], 
+    response: "Utilizamos metodologias ágeis, como Scrum e Kanban, organizando o desenvolvimento em sprints, o que garante entregas rápidas e contínuas para adaptar-se às mudanças nas necessidades do projeto." 
+  },
+  { 
+    keywords: ["API", "integrações", "serviços web", "APIs REST"], 
+    response: "Desenvolvemos e integramos APIs RESTful para facilitar a comunicação entre sistemas e serviços, garantindo uma integração robusta e escalável para suas soluções de software." 
+  },
+  { 
+    keywords: ["prototipagem de interfaces", "UI", "wireframes", "mockups"], 
+    response: "Criamos protótipos de interfaces utilizando ferramentas de wireframes e mockups para garantir que a experiência do usuário seja eficiente e que as funcionalidades sejam bem implementadas." 
+  },
+  { 
+    keywords: ["frameworks de front-end", "React", "Vue.js", "Angular"], 
+    response: "Trabalhamos com os principais frameworks de front-end, como React, Vue.js e Angular, para desenvolver interfaces dinâmicas e responsivas, sempre focadas na experiência do usuário." 
+  },
+  { 
+    keywords: ["versionamento de código", "Git", "GitHub", "controle de versão"], 
+    response: "Utilizamos ferramentas de versionamento de código, como Git e GitHub, para garantir a rastreabilidade das mudanças e facilitar o trabalho colaborativo em equipe durante o desenvolvimento de software." 
+  },
+  { 
+    keywords: ["CI/CD", "integração contínua", "deploy contínuo", "automação de build"], 
+    response: "Adotamos práticas de Integração Contínua (CI) e Deploy Contínuo (CD) para automatizar processos de build e deploy, acelerando o ciclo de desenvolvimento e garantindo a qualidade do código." 
+  },
+  { 
+    keywords: ["banco de dados", "SQL", "NoSQL", "modelagem de dados"], 
+    response: "Desenvolvemos soluções com bancos de dados SQL e NoSQL, realizando a modelagem de dados adequada para cada tipo de aplicação, com foco em eficiência e escalabilidade." 
+  },
+  { 
+    keywords: ["testes automatizados", "TDD", "testes unitários", "cobertura de testes"], 
+    response: "Implementamos testes automatizados e utilizamos práticas de Test Driven Development (TDD) para garantir a confiabilidade e a qualidade do software ao longo do processo de desenvolvimento." 
+  },
+  { 
+    keywords: ["DevOps", "automação", "infraestrutura como código", "containers"], 
+    response: "Adotamos práticas DevOps, como automação e infraestrutura como código, utilizando containers (Docker) para gerenciar e escalar ambientes de desenvolvimento e produção." 
+  },
+  { 
+    keywords: ["documentação", "manual de código", "wiki de projetos", "anotações técnicas"], 
+    response: "Priorizamos a documentação clara e organizada do código, com manuais detalhados e wikis de projetos, para garantir que as equipes possam manter e evoluir o software facilmente." 
+  },
+  { 
+    keywords: ["UX em programação", "design centrado no usuário", "testes de usabilidade"], 
+    response: "Integramos práticas de UX no desenvolvimento de software, com foco em design centrado no usuário e realização de testes de usabilidade para garantir que o produto atenda às expectativas do cliente final." 
+  },
+  { 
+    keywords: ["prototipagem em HTML/CSS", "design responsivo", "Bootstrap", "material design"], 
+    response: "Realizamos prototipagem de interfaces utilizando HTML, CSS e frameworks como Bootstrap e Material Design, criando layouts responsivos que " },
+    {
+    keywords: ["aplicativos","app","soluções"],
+    response: "Sim, oferecemos soluções totalmente personalizadas, adaptadas às necessidades e objetivos da sua empresa. Nossa equipe trabalha em estreita colaboração com o cliente para garantir que o projeto atenda a todos os requisitos específicos."},
+    {
+  "keywords": ["tecnologia", "programação", "inovação", "soluções"],
+  "response": "A InNovaIdeia, fundada por Dione Castro Alves, é especializada em tecnologia e oferece consultoria em TI, desenvolvimento de software personalizado e treinamentos para capacitação de equipes. Estamos prontos para atender às suas necessidades!"
+},
+{
+  "keywords": ["equipe", "experiência", "especialistas", "tecnologia"],
+  "response": "Nossa equipe é composta por especialistas com vasta experiência em tecnologias como Java, JavaScript, Python e C, prontos para enfrentar os desafios do mercado digital."
+},
+{
+  "keywords": ["abordagem", "personalizada", "soluções", "clientes"],
+  "response": "Na InNovaIdeia, nos destacamos por nossa abordagem personalizada, oferecendo soluções inovadoras que atendem às necessidades específicas de cada cliente."
+},
+{
+  "keywords": ["transformação", "digital", "inovação", "eficiência"],
+  "response": "Estamos comprometidos com a transformação digital das empresas, proporcionando soluções que aumentam a eficiência e promovem a inovação."
+},
+
+{
+  "keywords": ["qualidade", "serviço", "atendimento", "satisfação"],
+  "response": "Nosso compromisso é garantir a qualidade dos serviços prestados e a satisfação dos nossos clientes em cada projeto que realizamos."
+}
+];
+
+    // Função para buscar a resposta do chatbot
+    function getChatbotResponse(message) {
+      const lowerMessage = message.toLowerCase();
+      
+      // Procurar se alguma palavra-chave está contida na mensagem
+      for (let item of responses) {
+        for (let keyword of item.keywords) {
+          if (lowerMessage.includes(keyword)) {
+            return item.response;
+          }
+        }
+      }
+
+      return 'Desculpe, não entendi. Poderia reformular sua pergunta?';
+    }
+
+    $(document).ready(function() {
+      // Enviar mensagem e simular resposta do chatbot
+      $('#send-btn').click(function() {
+        const userMessage = $('#user-input').val();
+         $('#user-input').focus();
+        if (userMessage.trim() !== '') {
+          $('#chat-log').append('<div><strong>Você:</strong> ' + userMessage + '</div>');
+          $('#user-input').val('');
+
+          // Simulação de resposta do chatbot
+          setTimeout(() => {
+            $('#chat-log').append('<div><strong>Chatbot:</strong> ' + getChatbotResponse(userMessage) + '</div>');
+            $('#chat-log').scrollTop($('#chat-log')[0].scrollHeight);
+          }, 500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
