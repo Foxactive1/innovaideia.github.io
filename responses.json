@@ -1,18 +1,32 @@
 [
   {
     "keywords": [
+      "ola",
+      "oi",
+      "bom dia",
+      "boa tarde",
+      "boa noite",
+      "saudações",
+      "saudacoes"
+    ],
+    "response": "Olá! Como podemos ajudar você hoje? Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes. Fale conosco para saber mais!"
+  },
+  {
+    "keywords": [
       "serviço",
+      "servico",
       "serviços",
       "consultoria",
       "desenvolvimento"
     ],
-    "response": "Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes."
+     "response": "Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes."
   },
   {
     "keywords": [
       "sobre",
       "empresa",
       "história",
+      "historia",
       "fundação"
     ],
     "response": "A InNovaIdeia é uma empresa de tecnologia e inovação, fundada para oferecer soluções tecnológicas sob medida, com foco em inovação, automação e inteligência artificial."
@@ -30,14 +44,17 @@
     "keywords": [
       "projetos",
       "soluções",
+      "solucoes",
       "parceria",
-      "implementação"
+      "implementação",
+      "implementacao"
     ],
     "response": "Desenvolvemos soluções tecnológicas personalizadas para cada projeto, sempre alinhadas às necessidades de nossos clientes. Entre em contato para discutir uma parceria."
   },
   {
     "keywords": [
       "inovação",
+      "inovacao",
       "tecnologia",
       "tendências",
       "avançada"
@@ -49,6 +66,7 @@
       "valores",
       "missão",
       "visão",
+      "visao",
       "ética"
     ],
     "response": "Nossos valores incluem inovação contínua, transparência nos negócios, compromisso com a excelência e ética em todas as interações com nossos clientes e parceiros."
@@ -58,6 +76,7 @@
       "treinamento",
       "cursos",
       "capacitação",
+      "capacita",
       "workshops"
     ],
     "response": "Oferecemos treinamentos e workshops voltados para a capacitação de equipes, com temas como programação, gestão de projetos ágeis, e uso de tecnologias emergentes."
@@ -66,7 +85,7 @@
     "keywords": [
       "clientes",
       "cases",
-      "portfólio",
+      "portfolio",
       "testemunhos"
     ],
     "response": "Trabalhamos com clientes de diversos setores, oferecendo soluções inovadoras que agregam valor. Confira nossos cases de sucesso para saber mais sobre os projetos que já desenvolvemos."
@@ -94,7 +113,8 @@
       "preços",
       "custo",
       "valor",
-      "orçamento"
+      "orçamento",
+      "orcamento"
     ],
     "response": "Nossos serviços são personalizados, e o valor depende das necessidades específicas de cada projeto. Entre em contato para solicitar um orçamento sem compromisso."
   },
@@ -120,7 +140,11 @@
       "tecnologias",
       "ferramentas",
       "stack",
-      "frameworks"
+      "frameworks",
+      "python",
+      "javascript",
+      "react"
+
     ],
     "response": "Utilizamos uma ampla variedade de tecnologias e frameworks, como Python, JavaScript, Flask, React, Bootstrap, e muito mais para atender às necessidades dos projetos."
   },
@@ -724,7 +748,107 @@
 {
     "keywords": ["regtech", "compliance digital", "regulamentação", "conformidade", "gestão de riscos"],
     "response": "Oferecemos soluções RegTech para automatizar processos de compliance, monitorar regulamentações e gerenciar riscos regulatórios, garantindo conformidade contínua com legislações e normas."
-}
+},
+  {
+    "keywords": ["govtech", "governo", "setor público", "gestão pública", "serviços digitais"],
+    "response": "Desenvolvemos soluções digitais para o setor público, com foco em automação de serviços, transparência e eficiência na gestão de dados públicos, permitindo que governos melhorem o atendimento ao cidadão."
+  },
+  {
+    "keywords": ["supply chain", "logística", "rastreamento", "eficiência", "cadeia de suprimentos"],
+    "response": "Oferecemos soluções inteligentes para cadeia de suprimentos e logística, utilizando IA e IoT para rastreamento em tempo real e otimização de processos, reduzindo custos e aumentando a eficiência operacional."
+  },
+  {
+    "keywords": ["RPA", "automação de processos", "produtividade", "eficiência", "tarefas repetitivas"],
+    "response": "Implementamos automação robótica de processos (RPA) para tarefas repetitivas, permitindo que equipes se concentrem em atividades de maior valor agregado e melhorando a produtividade geral."
+  },
+  {
+    "keywords": ["edtech", "educação", "e-learning", "aprendizado adaptativo", "plataformas educacionais"],
+    "response": "Desenvolvemos plataformas educacionais personalizadas, integrando IA adaptativa, gamificação e análise de desempenho para uma experiência de aprendizado mais envolvente e eficaz."
+  },
+  {
+    "keywords": ["healthtech", "saúde e bem-estar", "monitoramento de saúde", "telemedicina", "wearables"],
+    "response": "Oferecemos soluções tecnológicas para saúde e bem-estar, incluindo monitoramento de saúde remoto, telemedicina avançada e dispositivos wearables para monitoramento contínuo de pacientes."
+  },
+  {
+    "keywords": ["privacidade", "segurança de dados", "LGPD", "GDPR", "compliance"],
+    "response": "Nossas soluções de segurança de dados garantem compliance com regulamentações como LGPD e GDPR, incluindo criptografia avançada e protocolos de segurança pós-quântica para proteger dados sensíveis."
+  },
+  {
+    "keywords": ["inclusao digital", "acessibilidade", "tecnologia inclusiva", "tradutor automático", "leitor de tela"],
+    "response": "Desenvolvemos ferramentas para promover inclusão digital, com funcionalidades como compatibilidade com leitores de tela, teclados acessíveis e traduções automáticas em tempo real para uma experiência inclusiva."
+  },
+  {
+    "keywords": ["correios", "serviços correios", "envio", "entrega", "logística"],
+    "response": "Os Correios oferecem uma gama de serviços para envio, logística, financeiros e digitais. Qual serviço específico você gostaria de saber mais?"
+  },
+  {
+    "keywords": ["carta", "telegrama", "sedex", "pac", "correspondência", "documento"],
+    "response": "Os Serviços Postais dos Correios incluem Carta, Telegrama, SEDEX, PAC e Cartão-Resposta. Gostaria de saber mais sobre algum deles?"
+  },
+  {
+    "keywords": ["carta", "telegrama", "correspondência"],
+    "response": "O serviço de Carta e Telegrama permite enviar correspondências e documentos, com opções expressas para telegrama."
+  },
+  {
+    "keywords": ["sedex", "entrega rápida", "expressa", "sedex hoje", "sedex 10", "sedex 12"],
+    "response": "O SEDEX oferece entrega rápida com variantes como SEDEX Hoje, SEDEX 10, SEDEX 12, e SEDEX comum. Deseja detalhes sobre algum deles?"
+  },
+  {
+    "keywords": ["pac", "entrega econômica", "econômico"],
+    "response": "O PAC é um serviço de envio econômico para encomendas, ideal para quem busca custo acessível com prazos maiores."
+  },
+  {
+    "keywords": ["cartão resposta", "resposta", "remetente paga"],
+    "response": "Com o Cartão-Resposta, o remetente arca com o custo da resposta. É ideal para empresas que recebem documentos e correspondências."
+  },
+  {
+    "keywords": ["logística", "logística reversa", "armazém", "e-commerce"],
+    "response": "Os Serviços Logísticos dos Correios incluem Logística Reversa e Armazém. Qual deles você gostaria de explorar?"
+  },
+  {
+    "keywords": ["devolução", "retorno", "logística reversa", "reverso"],
+    "response": "A Logística Reversa permite devolver encomendas ao remetente, sendo muito utilizada no comércio eletrônico."
+  },
+  {
+    "keywords": ["armazém", "armazenagem", "estoque", "distribuição"],
+    "response": "O Armazém dos Correios oferece armazenagem e distribuição para empresas que necessitam de suporte logístico."
+  },
+  {
+    "keywords": ["banco", "financeiro", "vale postal", "banco postal"],
+    "response": "Os Correios também oferecem serviços financeiros, como o Banco Postal e o Vale Postal. Qual serviço deseja conhecer?"
+  },
+  {
+    "keywords": ["banco postal", "conta bancária", "pagamento", "serviços bancários"],
+    "response": "O Banco Postal oferece serviços bancários básicos nas agências dos Correios, incluindo abertura de contas e pagamentos."
+  },
+  {
+    "keywords": ["vale postal", "transferência", "envio de dinheiro"],
+    "response": "O Vale Postal permite transferir valores para outras localidades, ideal para áreas com acesso limitado a bancos."
+  },
+  {
+    "keywords": ["digital", "documentação", "id correios", "certificado digital", "passaporte"],
+    "response": "Os Correios também oferecem serviços digitais e de documentação, como o ID Correios e emissão de certificados digitais e passaportes."
+  },
+  {
+    "keywords": ["id correios", "identificação digital", "segurança"],
+    "response": "O ID Correios é uma identificação digital que facilita o envio e recebimento seguro de encomendas."
+  },
+  {
+    "keywords": ["passaporte", "certificado digital", "documentação"],
+    "response": "Em parceria com a Polícia Federal, alguns postos dos Correios oferecem a emissão de passaportes e certificados digitais."
+  },
+  {
+    "keywords": ["internacional", "importação", "exportação", "sedex mundi"],
+    "response": "Para envios internacionais, os Correios oferecem o Exporta Fácil, Importa Fácil, e o SEDEX Mundi. Qual deles você quer saber mais?"
+  },
+  {
+    "keywords": ["exporta fácil", "importa fácil", "envio internacional", "importação", "exportação"],
+    "response": "O Correio Internacional facilita importação e exportação de mercadorias com as opções Exporta Fácil para exportação e Importa Fácil para importação."
+  },
+  {
+    "keywords": ["sedex mundi", "envio rápido internacional", "documentos internacionais"],
+    "response": "O SEDEX Mundi permite o envio rápido de documentos e encomendas para outros países com prazos específicos."
+  }
 
 
 ]
