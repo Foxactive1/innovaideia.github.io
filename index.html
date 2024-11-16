@@ -1,19 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <title>InNovaIdeia - Assessoria em Tecnologia</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <script src="https://bots.easy-peasy.ai/chat.min.js" data-chat-url="https://bots.easy-peasy.ai/bot/46cb1d71-2317-4c73-94d7-341c879bba09" data-btn-position="bottom-right" data-widget-btn-color="#6366f1 " defer> </script>
-      <style>
+  <title>InNovaIdeia - Assessoria em Tecnologia</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <style>
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-,,    .jumbotron {
+    .jumbotron {
       background-color: #f8f9fa;
       color: #333;
       padding: 50px 25px;
@@ -52,44 +57,78 @@
       border-bottom: 1px solid #ccc;
       margin-bottom: 10px;
     }
-
     #user-input {
       width: calc(100% - 50px);
       padding: 5px;
       margin: 5px;
     }
-
     #send-btn {
       margin: 5px;
     }
-      .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
-      .modal-content { background-color: white; margin: 10% auto; padding: 20px; width: 80%; max-width: 500px; }
-      .close { float: right; font-size: 1.5em; cursor: pointer; }
+    .chat-toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1001;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+    }
+    .close {
+      float: right;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
 <!-- Cabeçalho e Navegação -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">InNovaIdeia</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Início</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#valores">Valores</a></li>
-        <li><a href="#contato">Contato</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">InNovaIdeia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Início <span class="sr-only">(atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#servicos">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sobre">Sobre Nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#valores">Valores</a>
+        </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <ul class="navbar-nav ml-auto">
+     
       </ul>
     </div>
   </div>
@@ -129,21 +168,21 @@
 <!-- Seção de Serviços -->
 <div class="container-fluid" id="servicos">
   <div class="section-title">
-    <h2>Serviços</h2>
-    <p>Oferecemos uma ampla gama de serviços para atender suas necessidades tecnológicas.</p>
-  </div>
+      <h2>Serviços</h2>
+        <p>Na InNovaIdeia, proporcionamos soluções tecnológicas inovadoras e personalizadas, projetadas para acelerar a transformação digital da sua empresa, otimizar processos e impulsionar resultados estratégicos.</p>
+
   <div class="row">
-    <div class="col-sm-4">
-      <h3>Consultoria em TI</h3>
-      <p>Oferecemos suporte completo para otimizar a infraestrutura de TI da sua empresa.</p>
+    <div class="col-sm-4"><h3>Consultoria em TI Estratégica</h3>
+            <p>Conte com nossos especialistas para transformar sua infraestrutura de TI em um diferencial competitivo. Alinhamos estratégias tecnológicas às metas do seu negócio, otimizamos processos e garantimos uma gestão eficiente e sustentável dos recursos digitais.</p>
+
     </div>
     <div class="col-sm-4">
-      <h3>Desenvolvimento de Software</h3>
-      <p>Criação de soluções personalizadas para atender às necessidades do seu negócio.</p>
+       <h3>Desenvolvimento de Software Sob Medida</h3>
+        <p>Criamos softwares personalizados, projetados para resolver desafios únicos do seu negócio. Nossas soluções aliam inovação, escalabilidade e eficiência, proporcionando vantagem competitiva e otimizando seus processos operacionais.</p>
     </div>
     <div class="col-sm-4">
-      <h3>Treinamentos e Workshops</h3>
-      <p>Capacitação técnica para equipes com foco em tecnologias emergentes.</p>
+        <h3>Treinamentos e Capacitações Tecnológicas</h3>
+            <p>Oferecemos programas de treinamento e workshops práticos em tecnologias emergentes, como inteligência artificial, engenharia de prompt e automação. Capacite sua equipe para dominar ferramentas inovadoras e enfrentar os desafios digitais com confiança e competência.</p>
     </div>
   </div>
 </div>
@@ -156,11 +195,11 @@
   <div class="row">
     <div class="col-sm-6">
       <h3>Nossa História</h3>
-      <p>A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com ampla experiência em tecnologia desde 2009. Com conhecimentos em diversas linguagens de programação, como Java, JavaScript, Python e C, nossa equipe está pronta para enfrentar os desafios do mercado digital.</p>
+            <p>A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com mais de 15 anos de experiência em tecnologia. Com expertise em diversas linguagens de programação, incluindo Java, JavaScript, Python e C, nossa equipe está preparada para enfrentar os desafios do mercado digital e entregar soluções inovadoras e de alto impacto.</p>
     </div>
     <div class="col-sm-6">
       <h3>Nossa Missão</h3>
-      <p>Proporcionar soluções inovadoras e sustentáveis, promovendo o crescimento e a competitividade dos nossos clientes no ambiente digital.</p>
+            <p>Transformar desafios em oportunidades por meio de soluções inovadoras e sustentáveis, impulsionando o crescimento e a competitividade dos nossos clientes no ambiente digital e além.</p>
     </div>
   </div>
   <div class="row" style="margin-top: 30px;">
@@ -178,65 +217,78 @@
 <!-- Seção de Valores -->
 <div class="container-fluid values" id="valores">
   <div class="section-title">
-    <h2>Nossos Valores</h2>
+      <h2>Nossos Valores</h2>
+        <p>Na InNovaIdeia, nossos valores são a base sólida que sustenta cada ação e decisão. Eles nos guiam em todos os projetos, assegurando não apenas resultados de qualidade, mas também relações transparentes e de confiança com nossos clientes e parceiros.</p>
+
   </div>
   <div class="row">
     <div class="col-sm-3 text-center">
-      <h4>Inovação</h4>
-      <p>Buscamos sempre soluções criativas e eficazes para cada desafio.</p>
+        <h4>Inovação</h4>
+            <p>Estimulamos a criatividade em todos os processos e buscamos incessantemente soluções inovadoras que não apenas atendam, mas superem as necessidades e expectativas de nossos clientes, gerando valor real e duradouro.</p>
+
     </div>
     <div class="col-sm-3 text-center">
       <h4>Transparência</h4>
-      <p>Prezamos pela honestidade e clareza em todas as nossas relações.</p>
+            <p>Agimos com total honestidade e clareza em todas as interações, garantindo comunicação aberta e transparente. Isso nos permite construir relações de confiança mútua, baseadas em respeito e comprometimento com os interesses de nossos clientes e parceiros.</p>
     </div>
     <div class="col-sm-3 text-center">
       <h4>Comprometimento</h4>
-      <p>Estamos comprometidos com o sucesso dos nossos clientes.</p>
+            <p>Nos dedicamos incansavelmente ao sucesso de nossos clientes, cumprindo prazos rigorosamente e oferecendo soluções personalizadas que geram valor real e sustentável para seus negócios.</p>
     </div>
     <div class="col-sm-3 text-center">
-      <h4>Excelência</h4>
-      <p>Trabalhamos com excelência para oferecer os melhores resultados.</p>
+       <h4>Excelência</h4>
+            <p>Nos dedicamos à excelência em todos os processos, personalizando cada solução para garantir que os resultados não apenas atendam, mas realmente superem as necessidades e expectativas dos nossos clientes, criando um impacto positivo e duradouro em seus negócios.</p>
     </div>
   </div>
 </div>
 
 <!-- Botão para abrir o modal -->
-
 <div class="jumbotron text-center">
-<button id="openModalBtn">Trabalhe Conosco</button>
+  <button id="openModalBtn" class="btn btn-primary" data-toggle="modal" data-target="#trabalheModal">Trabalhe Conosco</button>
+</div>
 
-<!-- Modal -->
-<div class="jumbotron text-center">
-<div id="trabalheModal" class="modal">
-   
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    
-    <!-- Seção Trabalhe Conosco -->
-    <section id="trabalhe-conosco">
-      <h1>Trabalhe conosco</h1>
-      
-      
-      
-      <p>Estamos procurando por talentos que compartilhem nossa visão de inovação e excelência.</p>
-      
-      <!-- Formulário de inscrição -->
-      <form>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email">
-        <label for="cargo">Cargo de interesse:</label>
-        <select id="cargo" name="cargo">
-          <option value="">Selecione</option>
-          <option value="desenvolvedor">Desenvolvedor</option>
-          <option value="designer">Designer</option>
-          <option value="consultor">Consultor</option>
-        </select>
-        <label for="curriculo">Currículo (PDF):</label>
-        <input type="file" id="curriculo" name="curriculo">
-        <button>Enviar</button>
-      </form>
+<!-- Modal Trabalhe Conosco -->
+<div class="modal fade" id="trabalheModal" tabindex="-1" role="dialog" aria-labelledby="trabalheModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="trabalheModalLabel">Trabalhe Conosco</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Estamos procurando por talentos que compartilhem nossa visão de inovação e excelência.</p>
+        
+        <!-- Formulário de inscrição -->
+        <form action="https://example.com/submit_application" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="cargo">Cargo de Interesse:</label>
+            <select class="form-control" id="cargo" name="cargo" required>
+              <option value="">Selecione</option>
+              <option value="desenvolvedor">Desenvolvedor</option>
+              <option value="designer">Designer</option>
+              <option value="consultor">Consultor</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="curriculo">Currículo (PDF):</label>
+            <input type="file" class="form-control-file" id="curriculo" name="curriculo" accept=".pdf" required>
+          </div>
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
       
       <!-- Informações de contato -->
       <p>Para mais informações, entre em contato conosco:</p>
@@ -247,41 +299,51 @@
 </div>
 </div>
 
-<!-- Seção de Contato -->
-<div class="container-fluid" id="contato">
-  <div class="section-title">
-    <h2>Contato</h2>
-    <p>Entre em contato conosco para saber mais sobre nossos serviços.</p>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <h3>Informações de Contato</h3>
-      <p>Email: innovaideia2023@gmail.com</p>
-<p>Telefone: (16) 99311-7529</p>
-      <p>Endereço: Rua Vergílio José Gomes,2652,Franca, São Paulo</p>
+<!-- Botão para abrir o modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+  Fale Conosco
+</button>
+
+<!-- Modal de Contato -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Formulário de Contato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="https://example.com/submit_form" method="POST">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea class="form-control" id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
     </div>
-    <div class="col-sm-6">
-      <h3>Formulário de Contato</h3>
-      <form action="https://example.com/submit_form" method="POST">
-        <div class="form-group">
-          <label for="name">Nome:</label>
-          <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Mensagem:</label>
-          <textarea class="form-control" id="message" name="message" required></textarea>
-        </div>
+  </div>
+</div>
         
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        
         <!-- Botão para abrir/fechar o chatbot -->
-  <!-- Botão para abrir o chat -->
-  <button id="toggle-chatbox" class="btn btn-info" data-toggle="modal" data-target="#chatModal">
-    <i class="glyphicon glyphicon-comment"></i> 💬
-  </button>
+<!-- Chat Box -->
+<div id="chatbox">
+  <div id="chat-log"></div>
+  <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+  <button id="send-btn" class="btn btn-primary">Enviar</button>
+</div>
+<button class="chat-toggle-btn" id="toggle-chat-btn">💬</button>
 
   <!-- Modal do chatbot -->
   <div id="chatModal" class="modal fade" role="dialog">
@@ -319,5 +381,77 @@
   <input type="text" id="user-input" placeholder="Digite sua mensagem..." />
   <button id="send-btn" class="btn btn-primary">Enviar</button>
 </div>
+<!-- JavaScript -->
+<script>
+  let responses = [];
+
+  // Carregar o arquivo responses.json
+  $.getJSON("./responses.json")
+    .done(function(data) {
+      responses = data;
+    })
+    .fail(function() {
+      $('#chat-log').append('<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>');
+    });
+
+  // Função para buscar a resposta do chatbot com pesquisa parcial
+  function getChatbotResponse(message) {
+    const lowerMessage = message.toLowerCase();
+
+    // Procurar se alguma palavra-chave está contida na mensagem (pesquisa parcial)
+    for (let item of responses) {
+      for (let keyword of item.keywords) {
+        // Usar o método 'includes' para pesquisa parcial (como SQL LIKE)
+        if (lowerMessage.includes(keyword.toLowerCase())) {
+          return item.response;
+        }
+      }
+    }
+
+    return 'Desculpe, não entendi. Poderia reformular sua pergunta?';
+  }
+
+  $(document).ready(function() {
+    // Função para enviar a mensagem
+    function sendMessage() {
+      const userMessage = $('#user-input').val();
+      if (userMessage.trim() !== '') {
+        $('#chat-log').append('<div><strong>Você:</strong> ' + userMessage + '</div>');
+        $('#user-input').val('');
+
+        // Simulação de resposta do chatbot
+        setTimeout(() => {
+          $('#chat-log').append('<div><strong>Chatbot:</strong> ' + getChatbotResponse(userMessage) + '</div>');
+          $('#chat-log').scrollTop($('#chat-log')[0].scrollHeight); // Rolagem automática
+        }, 500);
+      }
+    }
+
+    // Enviar mensagem ao clicar no botão
+    $('#send-btn').click(sendMessage);
+
+    // Enviar mensagem ao pressionar "Enter"
+    $('#user-input').keypress(function(event) {
+      if (event.which === 13) { // Código para Enter
+        sendMessage();
+        event.preventDefault(); // Evita quebra de linha no campo de entrada
+      }
+    });
+
+    // Alternar a visibilidade do chat ao clicar no botão flutuante
+    $('#toggle-chat-btn').click(function() {
+      $('#chatbox').toggle();
+      if ($('#chatbox').is(':visible')) {
+        // Exibir mensagem de boas-vindas ao abrir o chat
+        if ($('#chat-log').children().length === 0) {
+          $('#chat-log').append('<div><strong>Chatbot:</strong> Olá! Como posso ajudá-lo hoje?</div>');
+        }
+        // Colocar o foco no campo de texto
+        $('#user-input').focus();
+      }
+    });
+    
+  });
+</script>
 </body>
 </html>
