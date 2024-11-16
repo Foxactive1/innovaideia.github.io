@@ -385,8 +385,8 @@
 <script>
   let responses = [];
 
-  // Carregar o arquivo responses.json
-  $.getJSON("./responses.json")
+  // Carregar o arquivo responses.json do GitHub Pages
+  $.getJSON("https://foxactive1.github.io/innovaideia/responses.json") // Link do JSON no GitHub Pages
     .done(function(data) {
       responses = data;
     })
