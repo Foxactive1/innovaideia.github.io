@@ -397,9 +397,16 @@
     })
     .catch(() => {
       const chatLog = document.getElementById("chat-log");
-      chatLog.innerHTML += '<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>';
+      chatLog.innerHTML += formatMessage("Erro", "Não foi possível carregar as respostas do chatbot.");
     });
 
+  // Função para formatar as mensagens do chat
+  function formatMessage(type, message) {
+    const icon = type === "Você" ? "👤" : type === "Chatbot" ? "🤖" : "⚠️";
+    return `<div>${icon} <strong>${type}:</strong> ${message}</div>`;
+  }
+
+  // Função para obter resposta do chatbot
   function getChatbotResponse(message) {
     const lowerMessage = message.toLowerCase();
 
@@ -414,41 +421,56 @@
     return 'Desculpe, não entendi. Poderia reformular sua pergunta?';
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    function sendMessage() {
-      const userInput = document.getElementById("user-input");
-      const chatLog = document.getElementById("chat-log");
-      const userMessage = userInput.value;
+  // Função para enviar mensagem
+  function sendMessage() {
+    const userInput = document.getElementById("user-input");
+    const chatLog = document.getElementById("chat-log");
+    const userMessage = userInput.value.trim();
 
-      if (userMessage.trim() !== '') {
-        chatLog.innerHTML += '<div><strong>Você:</strong> ' + userMessage + '</div>';
-        userInput.value = '';
+    if (userMessage !== '') {
+      chatLog.innerHTML += formatMessage("Você", userMessage);
+      userInput.value = '';
 
-        setTimeout(() => {
-          chatLog.innerHTML += '<div><strong>Chatbot:</strong> ' + getChatbotResponse(userMessage) + '</div>';
-          chatLog.scrollTop = chatLog.scrollHeight;
-        }, 500);
-      }
+      setTimeout(() => {
+        const response = getChatbotResponse(userMessage);
+        chatLog.innerHTML += formatMessage("Chatbot", response);
+        smoothScroll(chatLog);
+      }, 500);
     }
+  }
 
-    document.getElementById("send-btn").addEventListener("click", sendMessage);
-    document.getElementById("user-input").addEventListener("keypress", function (event) {
+  // Função para rolagem suave
+  function smoothScroll(element) {
+    element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sendButton = document.getElementById("send-btn");
+    const userInput = document.getElementById("user-input");
+    const toggleChatButton = document.getElementById("toggle-chat-btn");
+
+    // Configurar botão de envio
+    sendButton.addEventListener("click", sendMessage);
+
+    // Configurar envio ao pressionar Enter
+    userInput.addEventListener("keypress", function (event) {
       if (event.key === "Enter") {
         sendMessage();
         event.preventDefault();
       }
     });
 
-    document.getElementById("toggle-chat-btn").addEventListener("click", function () {
+    // Configurar botão para exibir/ocultar o chat
+    toggleChatButton.addEventListener("click", function () {
       const chatbox = document.getElementById("chatbox");
       chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
 
       if (chatbox.style.display === "block") {
         const chatLog = document.getElementById("chat-log");
         if (chatLog.children.length === 0) {
-          chatLog.innerHTML += '<div><strong>Chatbot:</strong> Olá! Como posso ajudá-lo hoje?</div>';
+          chatLog.innerHTML += formatMessage("Chatbot", "Olá! Como posso ajudá-lo hoje?");
         }
-        document.getElementById("user-input").focus();
+        userInput.focus();
       }
     });
   });
