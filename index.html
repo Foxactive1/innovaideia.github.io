@@ -386,7 +386,7 @@
   let responses = [];
 
   // Carregar o arquivo responses.json do GitHub Pages
-  $.getJSON("https://foxactive1.github.io/innovaideia.github.io/responses.json")
+  $.getJSON("responses.json")
   .then(response => {
     if (!response.ok) {
       throw new Error("Erro ao carregar o arquivo JSON");
