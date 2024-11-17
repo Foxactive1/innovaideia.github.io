@@ -386,13 +386,20 @@
   let responses = [];
 
   // Carregar o arquivo responses.json do GitHub Pages
-  $.getJSON("https://foxactive1.github.io/innovaideia/responses.json") // Link do JSON no GitHub Pages
-    .done(function(data) {
-      responses = data;
-    })
-    .fail(function() {
-      $('#chat-log').append('<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>');
-    });
+  fetch("https://foxactive1.github.io/innovaideia/responses.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Erro ao carregar o arquivo JSON");
+    }
+    return response.json();
+  })
+  .then(data => {
+    responses = data;
+  })
+  .catch(error => {
+    $('#chat-log').append('<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>');
+    console.error(error);
+  });
 
   // Função para buscar a resposta do chatbot com pesquisa parcial
   function getChatbotResponse(message) {
