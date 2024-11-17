@@ -385,29 +385,27 @@
 <script>
   let responses = [];
 
-  $.getJSON("https://foxactive1.github.io/innovaideia.github.io/responses.json")
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Erro ao carregar o arquivo JSON");
-    }
-    return response.json();
-  })
-  .then(data => {
-    responses = data;
-  })
-  .catch(error => {
-    $('#chat-log').append('<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>');
-    console.error(error);
-  });
+  // Carregar o arquivo responses.json com fetch
+  fetch("./responses.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Erro ao carregar o JSON");
+      }
+      return response.json();
+    })
+    .then(data => {
+      responses = data;
+    })
+    .catch(() => {
+      const chatLog = document.getElementById("chat-log");
+      chatLog.innerHTML += '<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>';
+    });
 
-  // Função para buscar a resposta do chatbot com pesquisa parcial
   function getChatbotResponse(message) {
     const lowerMessage = message.toLowerCase();
 
-    // Procurar se alguma palavra-chave está contida na mensagem (pesquisa parcial)
     for (let item of responses) {
       for (let keyword of item.keywords) {
-        // Usar o método 'includes' para pesquisa parcial (como SQL LIKE)
         if (lowerMessage.includes(keyword.toLowerCase())) {
           return item.response;
         }
@@ -417,46 +415,43 @@
     return 'Desculpe, não entendi. Poderia reformular sua pergunta?';
   }
 
-  $(document).ready(function() {
-    // Função para enviar a mensagem
+  document.addEventListener("DOMContentLoaded", function () {
     function sendMessage() {
-      const userMessage = $('#user-input').val();
-      if (userMessage.trim() !== '') {
-        $('#chat-log').append('<div><strong>Você:</strong> ' + userMessage + '</div>');
-        $('#user-input').val('');
+      const userInput = document.getElementById("user-input");
+      const chatLog = document.getElementById("chat-log");
+      const userMessage = userInput.value;
 
-        // Simulação de resposta do chatbot
+      if (userMessage.trim() !== '') {
+        chatLog.innerHTML += '<div><strong>Você:</strong> ' + userMessage + '</div>';
+        userInput.value = '';
+
         setTimeout(() => {
-          $('#chat-log').append('<div><strong>Chatbot:</strong> ' + getChatbotResponse(userMessage) + '</div>');
-          $('#chat-log').scrollTop($('#chat-log')[0].scrollHeight); // Rolagem automática
+          chatLog.innerHTML += '<div><strong>Chatbot:</strong> ' + getChatbotResponse(userMessage) + '</div>';
+          chatLog.scrollTop = chatLog.scrollHeight;
         }, 500);
       }
     }
 
-    // Enviar mensagem ao clicar no botão
-    $('#send-btn').click(sendMessage);
-
-    // Enviar mensagem ao pressionar "Enter"
-    $('#user-input').keypress(function(event) {
-      if (event.which === 13) { // Código para Enter
+    document.getElementById("send-btn").addEventListener("click", sendMessage);
+    document.getElementById("user-input").addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
         sendMessage();
-        event.preventDefault(); // Evita quebra de linha no campo de entrada
+        event.preventDefault();
       }
     });
 
-    // Alternar a visibilidade do chat ao clicar no botão flutuante
-    $('#toggle-chat-btn').click(function() {
-      $('#chatbox').toggle();
-      if ($('#chatbox').is(':visible')) {
-        // Exibir mensagem de boas-vindas ao abrir o chat
-        if ($('#chat-log').children().length === 0) {
-          $('#chat-log').append('<div><strong>Chatbot:</strong> Olá! Como posso ajudá-lo hoje?</div>');
+    document.getElementById("toggle-chat-btn").addEventListener("click", function () {
+      const chatbox = document.getElementById("chatbox");
+      chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
+
+      if (chatbox.style.display === "block") {
+        const chatLog = document.getElementById("chat-log");
+        if (chatLog.children.length === 0) {
+          chatLog.innerHTML += '<div><strong>Chatbot:</strong> Olá! Como posso ajudá-lo hoje?</div>';
         }
-        // Colocar o foco no campo de texto
-        $('#user-input').focus();
+        document.getElementById("user-input").focus();
       }
     });
-    
   });
 </script>
 </body>
