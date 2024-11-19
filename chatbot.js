@@ -3,7 +3,7 @@ let responses = [];
 // Carrega o arquivo JSON com as respostas do chatbot
 async function loadResponses() {
   try {
-    const response = await fetch("./responses.json");
+    const response = await fetch("responses.json");
     if (!response.ok) {
       throw new Error("Erro ao carregar o JSON");
     }
