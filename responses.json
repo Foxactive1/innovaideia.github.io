@@ -1,1274 +1,260 @@
-{"responses":[
-   {
-      "keywords":[
-         "ola",
-         "oi",
-         "bom dia",
-         "boa tarde",
-         "boa noite",
-         "saudações",
-         "saudacoes"
-      ],
-      "response":"Olá! Como podemos ajudar você hoje? Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes. Fale conosco para saber mais!"
-   },
-   {
-      "keywords":[
-         "serviço",
-         "servico",
-         "serviços",
-         "consultoria",
-         "desenvolvimento"
-      ],
-      "response":"Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes."
-   },
-   {
-      "keywords":[
-         "sobre",
-         "empresa",
-         "história",
-         "historia",
-         "fundação"
-      ],
-      "response":"A InNovaIdeia é uma empresa de tecnologia e inovação, fundada para oferecer soluções tecnológicas sob medida, com foco em inovação, automação e inteligência artificial."
-   },
-   {
-      "keywords":[
-         "contato",
-         "falar",
-         "suporte",
-         "ajuda"
-      ],
-      "response":"Você pode nos contatar pelo email: innovaideia2023@gmail.com ou através do telefone (16) 99311-7529 para suporte e consultas."
-   },
-   {
-      "keywords":[
-         "projetos",
-         "soluções",
-         "solucoes",
-         "parceria",
-         "implementação",
-         "implementacao"
-      ],
-      "response":"Desenvolvemos soluções tecnológicas personalizadas para cada projeto, sempre alinhadas às necessidades de nossos clientes. Entre em contato para discutir uma parceria."
-   },
-   {
-      "keywords":[
-         "inovação",
-         "inovacao",
-         "tecnologia",
-         "tendências",
-         "avançada"
-      ],
-      "response":"Estamos sempre atualizados com as últimas tendências tecnológicas, como inteligência artificial, automação de processos e soluções em nuvem para negócios."
-   },
-   {
-      "keywords":[
-         "valores",
-         "missão",
-         "visão",
-         "visao",
-         "ética"
-      ],
-      "response":"Nossos valores incluem inovação contínua, transparência nos negócios, compromisso com a excelência e ética em todas as interações com nossos clientes e parceiros."
-   },
-   {
-      "keywords":[
-         "treinamento",
-         "cursos",
-         "capacitação",
-         "capacita",
-         "workshops"
-      ],
-      "response":"Oferecemos treinamentos e workshops voltados para a capacitação de equipes, com temas como programação, gestão de projetos ágeis, e uso de tecnologias emergentes."
-   },
-   {
-      "keywords":[
-         "clientes",
-         "cases",
-         "portfolio",
-         "testemunhos"
-      ],
-      "response":"Trabalhamos com clientes de diversos setores, oferecendo soluções inovadoras que agregam valor. Confira nossos cases de sucesso para saber mais sobre os projetos que já desenvolvemos."
-   },
-   {
-      "keywords":[
-         "equipe",
-         "profissionais",
-         "time",
-         "especialistas"
-      ],
-      "response":"Nossa equipe é formada por especialistas altamente capacitados, com experiência em várias áreas da tecnologia, como desenvolvimento de software, IA, e gestão de dados."
-   },
-   {
-      "keywords":[
-         "segurança",
-         "dados",
-         "privacidade",
-         "proteção"
-      ],
-      "response":"Priorizamos a segurança e privacidade dos dados em todos os nossos projetos, aplicando as melhores práticas e soluções para garantir a proteção da informação."
-   },
-   {
-      "keywords":[
-         "preços",
-         "custo",
-         "valor",
-         "orçamento",
-         "orcamento"
-      ],
-      "response":"Nossos serviços são personalizados, e o valor depende das necessidades específicas de cada projeto. Entre em contato para solicitar um orçamento sem compromisso."
-   },
-   {
-      "keywords":[
-         "parceiros",
-         "colaboração",
-         "networking"
-      ],
-      "response":"Trabalhamos em colaboração com parceiros estratégicos para fornecer as melhores soluções tecnológicas. Se você deseja se tornar um parceiro, entre em contato!"
-   },
-   {
-      "keywords":[
-         "prazo",
-         "entrega",
-         "deadlines",
-         "projeto"
-      ],
-      "response":"Trabalhamos com prazos claros e definidos, sempre com o compromisso de entregar os projetos no tempo acordado e com a máxima qualidade."
-   },
-   {
-      "keywords":[
-         "tecnologias",
-         "ferramentas",
-         "stack",
-         "frameworks",
-         "python",
-         "javascript",
-         "react"
-      ],
-      "response":"Utilizamos uma ampla variedade de tecnologias e frameworks, como Python, JavaScript, Flask, React, Bootstrap, e muito mais para atender às necessidades dos projetos."
-   },
-   {
-      "keywords":[
-         "carreiras",
-         "emprego",
-         "oportunidades",
-         "trabalho"
-      ],
-      "response":"Estamos sempre em busca de talentos para integrar nossa equipe. Confira nossas vagas abertas e oportunidades de carreira em nosso site ou entre em contato conosco para mais informações."
-   },
-   {
-      "keywords":[
-         "suporte técnico",
-         "manutenção",
-         "atendimento",
-         "helpdesk"
-      ],
-      "response":"Oferecemos suporte técnico dedicado e serviços de manutenção para garantir que seus sistemas operem com máxima eficiência. Fale conosco para agendar uma consulta."
-   },
-   {
-      "keywords":[
-         "futuro",
-         "estratégia",
-         "objetivos",
-         "plano"
-      ],
-      "response":"Nosso foco é continuar sendo referência em tecnologia e inovação, buscando sempre antecipar as necessidades do mercado e proporcionar soluções de ponta."
-   },
-   {
-      "keywords":[
-         "metodologias",
-         "scrum",
-         "ágil",
-         "gestão de projetos"
-      ],
-      "response":"Adotamos metodologias ágeis, como Scrum e Kanban, para garantir a gestão eficiente de projetos, com entregas contínuas e alinhamento às expectativas dos clientes."
-   },
-   {
-      "keywords":[
-         "feedback",
-         "satisfação",
-         "opinião",
-         "avaliação"
-      ],
-      "response":"A opinião dos nossos clientes é fundamental para nós. Sempre buscamos melhorar nossos serviços com base em feedbacks e avaliações constantes."
-   },
-   {
-      "keywords":[
-         "sustentabilidade",
-         "responsabilidade",
-         "meio ambiente",
-         "ecologia"
-      ],
-      "response":"Estamos comprometidos com práticas sustentáveis, implementando soluções que minimizam o impacto ambiental e promovem o uso consciente da tecnologia."
-   },
-   {
-      "keywords":[
-         "consultoria estratégica",
-         "análise de mercado",
-         "planejamento",
-         "transformação digital"
-      ],
-      "response":"Oferecemos consultoria estratégica para auxiliar na transformação digital das empresas, com análise de mercado e planejamento para implementação de novas tecnologias."
-   },
-   {
-      "keywords":[
-         "testes",
-         "qualidade",
-         "garantia",
-         "validação"
-      ],
-      "response":"Realizamos testes rigorosos de qualidade e validação para garantir que as soluções entregues atendam aos mais altos padrões de desempenho e segurança."
-   },
-   {
-      "keywords":[
-         "customização",
-         "personalização",
-         "adaptação",
-         "flexibilidade"
-      ],
-      "response":"Nossas soluções são altamente personalizáveis, desenvolvidas de acordo com as necessidades específicas de cada cliente, garantindo flexibilidade e adaptação ao seu negócio."
-   },
-   {
-      "keywords":[
-         "infraestrutura",
-         "servidores",
-         "cloud",
-         "hospedagem"
-      ],
-      "response":"Oferecemos soluções completas de infraestrutura, desde a gestão de servidores locais até o desenvolvimento e hospedagem em ambientes de cloud computing."
-   },
-   {
-      "keywords":[
-         "cultura",
-         "ambiente de trabalho",
-         "valores corporativos",
-         "diversidade"
-      ],
-      "response":"Na InNovaIdeia, promovemos um ambiente de trabalho inclusivo e colaborativo, onde a diversidade de ideias e experiências é valorizada e impulsiona nossa inovação contínua."
-   },
-   {
-      "keywords":[
-         "parceria estratégica",
-         "alianças",
-         "cooperação",
-         "joint venture"
-      ],
-      "response":"Estabelecemos parcerias estratégicas e alianças com outras empresas e instituições, fortalecendo nossa capacidade de entregar soluções tecnológicas inovadoras e robustas."
-   },
-   {
-      "keywords":[
-         "fidelidade",
-         "relacionamento",
-         "clientes recorrentes",
-         "programa de fidelidade"
-      ],
-      "response":"Valorizamos nossos clientes recorrentes e oferecemos programas de fidelidade que garantem vantagens exclusivas e suporte contínuo para projetos de longo prazo."
-   },
-   {
-      "keywords":[
-         "inovação contínua",
-         "pesquisa",
-         "desenvolvimento",
-         "R&D"
-      ],
-      "response":"Investimos constantemente em pesquisa e desenvolvimento para explorar novas tecnologias e soluções inovadoras, garantindo que nossos clientes sempre estejam à frente do mercado."
-   },
-   {
-      "keywords":[
-         "melhorias contínuas",
-         "otimização",
-         "eficiência",
-         "performance"
-      ],
-      "response":"Nosso foco está em entregar soluções que sejam não apenas funcionais, mas também otimizadas para performance, escalabilidade e eficiência a longo prazo."
-   },
-   {
-      "keywords":[
-         "escalabilidade",
-         "crescimento",
-         "expansão",
-         "futuro"
-      ],
-      "response":"Desenvolvemos soluções escaláveis que acompanham o crescimento de sua empresa, garantindo que suas necessidades tecnológicas sejam atendidas conforme seu negócio se expande."
-   },
-   {
-      "keywords":[
-         "suporte contínuo",
-         "atualizações",
-         "manutenção preventiva",
-         "monitoramento"
-      ],
-      "response":"Oferecemos suporte contínuo com serviços de manutenção preventiva e monitoramento, assegurando que seus sistemas estejam sempre atualizados e funcionando perfeitamente."
-   },
-   {
-      "keywords":[
-         "user experience",
-         "UX",
-         "UI",
-         "experiência do usuário"
-      ],
-      "response":"Desenvolvemos interfaces intuitivas e focadas na experiência do usuário (UX), garantindo que seus clientes interajam de maneira eficiente e agradável com suas soluções."
-   },
-   {
-      "keywords":[
-         "responsabilidade social",
-         "projetos sociais",
-         "comunidade",
-         "impacto social"
-      ],
-      "response":"Apoiamos iniciativas de responsabilidade social e buscamos ativamente participar de projetos que gerem impacto positivo nas comunidades onde atuamos."
-   },
-   {
-      "keywords":[
-         "competitividade",
-         "mercado",
-         "diferencial",
-         "vantagem"
-      ],
-      "response":"Nossa expertise em tecnologia e inovação oferece uma vantagem competitiva aos nossos clientes, permitindo que eles se destaquem no mercado com soluções diferenciadas."
-   },
-   {
-      "keywords":[
-         "transformação digital",
-         "digitalização",
-         "automação",
-         "inovação tecnológica"
-      ],
-      "response":"Ajudamos empresas a navegar pela transformação digital, automatizando processos e implementando inovações tecnológicas que impulsionam a eficiência e a competitividade."
-   },
-   {
-      "keywords":[
-         "consultoria em IA",
-         "inteligência artificial",
-         "machine learning",
-         "automação inteligente"
-      ],
-      "response":"Fornecemos consultoria especializada em inteligência artificial e machine learning, desenvolvendo soluções de automação inteligente para otimizar operações e melhorar a tomada de decisões."
-   },
-   {
-      "keywords":[
-         "big data",
-         "análise de dados",
-         "data science",
-         "gestão de dados"
-      ],
-      "response":"Oferecemos soluções em análise de dados e ciência de dados (Data Science), ajudando as empresas a tomar decisões mais informadas com base em big data e insights precisos."
-   },
-   {
-      "keywords":[
-         "metodologias de inovação",
-         "design thinking",
-         "lean startup",
-         "prototipagem"
-      ],
-      "response":"Utilizamos metodologias como Design Thinking e Lean Startup para promover a inovação dentro das empresas, desde a concepção de ideias até a prototipagem rápida de soluções."
-   },
-   {
-      "keywords":[
-         "prototipagem",
-         "prototipagem rápida",
-         "MVP",
-         "produto mínimo viável"
-      ],
-      "response":"Desenvolvemos protótipos rápidos e produtos mínimos viáveis (MVP) para validar ideias de negócios e tecnologias com agilidade, permitindo testes e ajustes antes de grandes investimentos."
-   },
-   {
-      "keywords":[
-         "desenvolvimento ágil",
-         "scrum",
-         "kanban",
-         "sprints"
-      ],
-      "response":"Utilizamos metodologias ágeis, como Scrum e Kanban, organizando o desenvolvimento em sprints, o que garante entregas rápidas e contínuas para adaptar-se às mudanças nas necessidades do projeto."
-   },
-   {
-      "keywords":[
-         "API",
-         "integrações",
-         "serviços web",
-         "APIs REST"
-      ],
-      "response":"Desenvolvemos e integramos APIs RESTful para facilitar a comunicação entre sistemas e serviços, garantindo uma integração robusta e escalável para suas soluções de software."
-   },
-   {
-      "keywords":[
-         "prototipagem de interfaces",
-         "UI",
-         "wireframes",
-         "mockups"
-      ],
-      "response":"Criamos protótipos de interfaces utilizando ferramentas de wireframes e mockups para garantir que a experiência do usuário seja eficiente e que as funcionalidades sejam bem implementadas."
-   },
-   {
-      "keywords":[
-         "frameworks de front-end",
-         "React",
-         "Vue.js",
-         "Angular"
-      ],
-      "response":"Trabalhamos com os principais frameworks de front-end, como React, Vue.js e Angular, para desenvolver interfaces dinâmicas e responsivas, sempre focadas na experiência do usuário."
-   },
-   {
-      "keywords":[
-         "versionamento de código",
-         "Git",
-         "GitHub",
-         "controle de versão"
-      ],
-      "response":"Utilizamos ferramentas de versionamento de código, como Git e GitHub, para garantir a rastreabilidade das mudanças e facilitar o trabalho colaborativo em equipe durante o desenvolvimento de software."
-   },
-   {
-      "keywords":[
-         "CI/CD",
-         "integração contínua",
-         "deploy contínuo",
-         "automação de build"
-      ],
-      "response":"Adotamos práticas de Integração Contínua (CI) e Deploy Contínuo (CD) para automatizar processos de build e deploy, acelerando o ciclo de desenvolvimento e garantindo a qualidade do código."
-   },
-   {
-      "keywords":[
-         "banco de dados",
-         "SQL",
-         "NoSQL",
-         "modelagem de dados"
-      ],
-      "response":"Desenvolvemos soluções com bancos de dados SQL e NoSQL, realizando a modelagem de dados adequada para cada tipo de aplicação, com foco em eficiência e escalabilidade."
-   },
-   {
-      "keywords":[
-         "testes automatizados",
-         "TDD",
-         "testes unitários",
-         "cobertura de testes"
-      ],
-      "response":"Implementamos testes automatizados e utilizamos práticas de Test Driven Development (TDD) para garantir a confiabilidade e a qualidade do software ao longo do processo de desenvolvimento."
-   },
-   {
-      "keywords":[
-         "DevOps",
-         "automação",
-         "infraestrutura como código",
-         "containers"
-      ],
-      "response":"Adotamos práticas DevOps, como automação e infraestrutura como código, utilizando containers (Docker) para gerenciar e escalar ambientes de desenvolvimento e produção."
-   },
-   {
-      "keywords":[
-         "documentação",
-         "manual de código",
-         "wiki de projetos",
-         "anotações técnicas",
-         "relatórios"
-      ],
-      "response":"Priorizamos a documentação clara e organizada do código, com manuais detalhados e wikis de projetos, para garantir que as equipes possam manter e evoluir o software facilmente."
-   },
-   {
-      "keywords":[
-         "UX em programação",
-         "design centrado no usuário",
-         "testes de usabilidade",
-         "ux"
-      ],
-      "response":"Integramos práticas de UX no desenvolvimento de software, com foco em design centrado no usuário e realização de testes de usabilidade para garantir que o produto atenda às expectativas do cliente final."
-   },
-   {
-      "keywords":[
-         "prototipagem em HTML/CSS",
-         "design responsivo",
-         "Bootstrap",
-         "material design"
-      ],
-      "response":"Realizamos prototipagem de interfaces utilizando HTML, CSS e frameworks como Bootstrap e Material Design, criando layouts responsivos que "
-   },
-   {
-      "keywords":[
-         "aplicativos",
-         "app",
-         "soluções"
-      ],
-      "response":"Sim, oferecemos soluções totalmente personalizadas, adaptadas às necessidades e objetivos da sua empresa. Nossa equipe trabalha em estreita colaboração com o cliente para garantir que o projeto atenda a todos os requisitos específicos."
-   },
-   {
-      "keywords":[
-         "tecnologia",
-         "programação",
-         "inovação",
-         "soluções"
-      ],
-      "response":"A InNovaIdeia, fundada por Dione Castro Alves, é especializada em tecnologia e oferece consultoria em TI, desenvolvimento de software personalizado e treinamentos para capacitação de equipes. Estamos prontos para atender às suas necessidades!"
-   },
-   {
-      "keywords":[
-         "equipe",
-         "experiência",
-         "especialistas",
-         "tecnologia"
-      ],
-      "response":"Nossa equipe é composta por especialistas com vasta experiência em tecnologias como Java, JavaScript, Python e C, prontos para enfrentar os desafios do mercado digital."
-   },
-   {
-      "keywords":[
-         "abordagem",
-         "personalizada",
-         "soluções",
-         "clientes"
-      ],
-      "response":"Na InNovaIdeia, nos destacamos por nossa abordagem personalizada, oferecendo soluções inovadoras que atendem às necessidades específicas de cada cliente."
-   },
-   {
-      "keywords":[
-         "transformação",
-         "digital",
-         "inovação",
-         "eficiência"
-      ],
-      "response":"Estamos comprometidos com a transformação digital das empresas, proporcionando soluções que aumentam a eficiência e promovem a inovação."
-   },
-   {
-      "keywords":[
-         "qualidade",
-         "serviço",
-         "atendimento",
-         "satisfação"
-      ],
-      "response":"Nosso compromisso é garantir a qualidade dos serviços prestados e a satisfação dos nossos clientes em cada projeto que realizamos."
-   },
-   {
-      "keywords":[
-         "coaching",
-         "PNL",
-         "inovação",
-         "desenvolvimento humano",
-         "potencializar habilidades"
-      ],
-      "response":"Na InNovaIdeia, acreditamos que o desenvolvimento humano e a inovação caminham lado a lado. Oferecemos programas de Coaching com Programação Neurolinguística (PNL) para capacitar pessoas e organizações, promovendo autoconhecimento e mentalidade de crescimento. Se você busca potencializar suas habilidades e alcançar resultados excepcionais, nossos programas podem ser o diferencial em sua trajetória."
-   },
-   {
-      "python":{
-         "response":"Python é uma linguagem de programação de alto nível, ideal para automação, IA, análise de dados e desenvolvimento web.",
-         "principais_usos":[
-            "Desenvolvimento Web (Django, Flask)",
-            "Ciência de Dados (Pandas, NumPy)",
-            "Machine Learning (TensorFlow, PyTorch)",
-            "Automação e Scripting",
-            "Desenvolvimento de APIs"
-         ],
-         "caracteristicas":{
-            "tipagem":"Dinâmica e forte",
-            "paradigma":[
-               "Orientado a Objetos",
-               "Funcional",
-               "Imperativo"
-            ],
-            "gerenciador_pacotes":"pip",
-            "versao_atual":"3.12"
-         },
-         "frameworks":{
-            "web":[
-               "Django",
-               "Flask",
-               "FastAPI"
-            ],
-            "data_science":[
-               "Pandas",
-               "NumPy",
-               "Matplotlib"
-            ],
-            "ml":[
-               "TensorFlow",
-               "PyTorch",
-               "Scikit-learn"
-            ]
-         },
-         "exemplos":{
-            "hello_world":"print('Hello, world!')",
-            "loop":"for i in range(5):\n    print(f'Número {i}')",
-            "funcao":"def soma(a, b):\n    return a + b"
-         }
-      },
-      "javascript":{
-         "response":"JavaScript é uma linguagem de programação versátil usada principalmente para desenvolvimento web front-end e back-end.",
-         "principais_usos":[
-            "Desenvolvimento Web Front-end",
-            "Desenvolvimento Back-end (Node.js)",
-            "Desenvolvimento Mobile (React Native)",
-            "Aplicações Desktop (Electron)",
-            "APIs RESTful"
-         ],
-         "caracteristicas":{
-            "tipagem":"Dinâmica e fraca",
-            "paradigma":[
-               "Orientado a Objetos",
-               "Funcional",
-               "Prototipal"
-            ],
-            "gerenciador_pacotes":"npm",
-            "versao_atual":"ES2024"
-         },
-         "frameworks":{
-            "frontend":[
-               "React",
-               "Vue.js",
-               "Angular"
-            ],
-            "backend":[
-               "Node.js",
-               "Express",
-               "NestJS"
-            ],
-            "mobile":[
-               "React Native",
-               "Ionic"
-            ],
-            "desktop":[
-               "Electron"
-            ]
-         },
-         "exemplos":{
-            "hello_world":"console.log('Hello, world!');",
-            "loop":"for (let i = 0; i < 5; i++) {\n    console.log(`Número ${i}`);\n}",
-            "funcao":"function soma(a, b) {\n    return a + b;\n}"
-         }
-      },
-      "java":{
-         "response":"Java é uma linguagem de programação orientada a objetos, robusta e multiplataforma.",
-         "principais_usos":[
-            "Desenvolvimento Empresarial",
-            "Aplicações Android",
-            "Sistemas Distribuídos",
-            "Microserviços",
-            "Big Data"
-         ],
-         "caracteristicas":{
-            "tipagem":"Estática e forte",
-            "paradigma":[
-               "Orientado a Objetos"
-            ],
-            "gerenciador_pacotes":"Maven/Gradle",
-            "versao_atual":"21"
-         },
-         "frameworks":{
-            "web":[
-               "Spring",
-               "Jakarta EE",
-               "Micronaut"
-            ],
-            "orm":[
-               "Hibernate",
-               "JPA"
-            ],
-            "testing":[
-               "JUnit",
-               "TestNG"
-            ]
-         },
-         "exemplos":{
-            "hello_world":"public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, world!\");\n    }\n}",
-            "loop":"for (int i = 0; i < 5; i++) {\n    System.out.println(\"Número \" + i);\n}",
-            "funcao":"public int soma(int a, int b) {\n    return a + b;\n}"
-         }
-      }
-   },
-   {
-      "keywords":[
-         "blockchain",
-         "web3",
-         "smart contracts",
-         "criptomoedas"
-      ],
-      "response":"Oferecemos soluções em blockchain e desenvolvimento Web3, incluindo smart contracts, DApps e integração com criptomoedas para empresas que buscam inovação em tecnologias descentralizadas."
-   },
-   {
-      "keywords":[
-         "IoT",
-         "internet das coisas",
-         "sensores",
-         "automação industrial"
-      ],
-      "response":"Desenvolvemos soluções de IoT que conectam dispositivos físicos à internet, permitindo monitoramento em tempo real, automação industrial e coleta de dados para otimização de processos."
-   },
-   {
-      "keywords":[
-         "realidade virtual",
-         "VR",
-         "AR",
-         "realidade aumentada",
-         "metaverso"
-      ],
-      "response":"Criamos experiências imersivas em realidade virtual e aumentada, desde treinamentos corporativos até aplicações para o metaverso, revolucionando a forma como as empresas interagem com seus clientes."
-   },
-   {
-      "keywords":[
-         "pentesting",
-         "análise de vulnerabilidades",
-         "segurança ofensiva",
-         "LGPD"
-      ],
-      "response":"Realizamos testes de penetração, análise de vulnerabilidades e implementamos soluções de segurança em conformidade com a LGPD, protegendo seus ativos digitais contra ameaças cibernéticas."
-   },
-   {
-      "keywords":[
-         "edge computing",
-         "computação de borda",
-         "latência",
-         "processamento distribuído"
-      ],
-      "response":"Implementamos soluções de edge computing para processar dados mais próximo da fonte, reduzindo latência e custos de bandwidth, ideal para aplicações que necessitam de resposta em tempo real."
-   },
-   {
-      "keywords":[
-         "computação quântica",
-         "algoritmos quânticos",
-         "qubits",
-         "quantum computing"
-      ],
-      "response":"Exploramos as possibilidades da computação quântica para otimização de algoritmos e resolução de problemas complexos, preparando sua empresa para a próxima revolução computacional com consultoria especializada e desenvolvimento de algoritmos quânticos."
-   },
-   {
-      "keywords":[
-         "green it",
-         "sustentabilidade digital",
-         "eficiência energética",
-         "tecnologia verde",
-         "carbono neutro"
-      ],
-      "response":"Desenvolvemos soluções tecnológicas sustentáveis, focando em eficiência energética e redução da pegada de carbono. Nossos sistemas são projetados para otimizar recursos computacionais e promover práticas ambientalmente responsáveis."
-   },
-   {
-      "keywords":[
-         "robótica",
-         "automação industrial",
-         "manufatura inteligente",
-         "indústria 4.0",
-         "robôs colaborativos"
-      ],
-      "response":"Implementamos soluções de robótica e automação industrial, integrando sistemas inteligentes de manufatura com IoT e IA para aumentar a eficiência produtiva e reduzir custos operacionais na Indústria 4.0."
-   },
-   {
-      "keywords":[
-         "bioinformática",
-         "genômica",
-         "análise de dados biológicos",
-         "sequenciamento",
-         "biotecnologia"
-      ],
-      "response":"Oferecemos soluções em bioinformática para análise de dados genômicos e biológicos, utilizando algoritmos avançados e computação de alto desempenho para pesquisa e desenvolvimento em biotecnologia."
-   },
-   {
-      "keywords":[
-         "nuvem híbrida",
-         "multi-cloud",
-         "cloud híbrida",
-         "integração de nuvens",
-         "orquestração"
-      ],
-      "response":"Desenvolvemos estratégias de nuvem híbrida personalizadas, integrando ambientes on-premise com múltiplas nuvens públicas, garantindo flexibilidade, segurança e otimização de custos para sua infraestrutura."
-   },
-   {
-      "keywords":[
-         "computação neuromórfica",
-         "chips neuromórficos",
-         "redes neurais em hardware",
-         "processamento cognitivo"
-      ],
-      "response":"Pesquisamos e implementamos soluções baseadas em computação neuromórfica, desenvolvendo sistemas que simulam o funcionamento do cérebro humano para processamento mais eficiente de tarefas cognitivas e de IA."
-   },
-   {
-      "keywords":[
-         "5G",
-         "redes privadas",
-         "conectividade avançada",
-         "edge networking",
-         "baixa latência"
-      ],
-      "response":"Implementamos soluções baseadas em 5G e redes privadas de alta performance, possibilitando comunicação em tempo real, IoT massivo e aplicações que demandam baixa latência e alta confiabilidade."
-   },
-   {
-      "keywords":[
-         "gêmeos digitais",
-         "digital twins",
-         "simulação virtual",
-         "modelagem digital",
-         "monitoramento real-time"
-      ],
-      "response":"Criamos gêmeos digitais para simular e otimizar processos, equipamentos e sistemas em tempo real, permitindo testes, previsões e otimizações sem riscos operacionais."
-   },
-   {
-      "keywords":[
-         "computação afetiva",
-         "IA emocional",
-         "reconhecimento de emoções",
-         "interação humano-computador"
-      ],
-      "response":"Desenvolvemos sistemas de computação afetiva que reconhecem, interpretam e simulam emoções humanas, melhorando a interação entre usuários e máquinas em aplicações de atendimento, educação e saúde."
-   },
-   {
-      "keywords":[
-         "tecnologia espacial",
-         "dados satelitais",
-         "comunicação espacial",
-         "space tech"
-      ],
-      "response":"Trabalhamos com processamento de dados satelitais e desenvolvimento de soluções para comunicação espacial, apoiando projetos que necessitam de informações geoespaciais e conectividade global."
-   },
-   {
-      "keywords":[
-         "criptografia quântica",
-         "segurança pós-quântica",
-         "quantum-safe",
-         "proteção quântica"
-      ],
-      "response":"Implementamos soluções de segurança preparadas para a era quântica, incluindo criptografia pós-quântica e protocolos de distribuição de chaves quânticas para proteger dados sensíveis."
-   },
-   {
-      "keywords":[
-         "realidade mista",
-         "treinamento imersivo",
-         "colaboração virtual",
-         "digital workplace"
-      ],
-      "response":"Desenvolvemos ambientes imersivos para treinamento corporativo, colaboração remota e visualização de dados, combinando VR, AR e MR para criar experiências empresariais mais efetivas."
-   },
-   {
-      "keywords":[
-         "computação cognitiva",
-         "processamento de linguagem natural",
-         "análise cognitiva",
-         "AI reasoning"
-      ],
-      "response":"Oferecemos soluções em computação cognitiva que combinam processamento de linguagem natural, machine learning e análise de dados para automatizar processos decisórios complexos e interações humano-máquina."
-   },
-   {
-      "keywords":[
-         "healthtech",
-         "telemedicina",
-         "saúde digital",
-         "monitoramento remoto",
-         "AI em saúde"
-      ],
-      "response":"Desenvolvemos soluções tecnológicas para a área da saúde, incluindo plataformas de telemedicina, sistemas de monitoramento remoto de pacientes e análise de dados médicos com inteligência artificial."
-   },
-   {
-      "keywords":[
-         "low-code",
-         "no-code",
-         "desenvolvimento rápido",
-         "automação de desenvolvimento"
-      ],
-      "response":"Oferecemos plataformas e soluções low-code/no-code que aceleram o desenvolvimento de aplicações, permitindo que empresas criem e adaptem sistemas rapidamente sem necessidade de programação extensiva."
-   },
-   {
-      "keywords":[
-         "fintech",
-         "open banking",
-         "pagamentos digitais",
-         "blockchain financeiro",
-         "banking as a service"
-      ],
-      "response":"Desenvolvemos soluções fintech inovadoras, incluindo sistemas de open banking, plataformas de pagamento digital e soluções blockchain para serviços financeiros, atendendo às regulamentações do setor bancário e facilitando a transformação digital financeira."
-   },
-   {
-      "keywords":[
-         "edtech",
-         "ensino digital",
-         "plataforma educacional",
-         "e-learning",
-         "aprendizagem adaptativa"
-      ],
-      "response":"Criamos plataformas educacionais inteligentes com aprendizagem adaptativa, gamificação e análise de desempenho em tempo real, transformando a experiência de ensino e aprendizagem através da tecnologia."
-   },
-   {
-      "keywords":[
-         "computação em grid",
-         "processamento distribuído",
-         "grid computing",
-         "computação paralela",
-         "cluster"
-      ],
-      "response":"Implementamos soluções de computação em grid para processamento distribuído de alta performance, ideal para cálculos complexos, simulações científicas e análise de grandes volumes de dados."
-   },
-   {
-      "keywords":[
-         "microsserviços",
-         "serverless",
-         "arquitetura cloud-native",
-         "funções lambda",
-         "containers"
-      ],
-      "response":"Desenvolvemos arquiteturas modernas baseadas em microsserviços e serverless, proporcionando escalabilidade, manutenibilidade e redução de custos através de deployments automatizados e infraestrutura sob demanda."
-   },
-   {
-      "keywords":[
-         "energia renovável",
-         "smart grid",
-         "gestão energética",
-         "eficiência energética",
-         "energia sustentável"
-      ],
-      "response":"Oferecemos soluções tecnológicas para o setor de energia renovável, incluindo sistemas de gestão de smart grids, monitoramento de consumo e otimização de recursos energéticos através de IA e IoT."
-   },
-   {
-      "keywords":[
-         "impressão 3D",
-         "manufatura aditiva",
-         "prototipagem rápida",
-         "fabricação digital",
-         "modelagem 3D"
-      ],
-      "response":"Desenvolvemos soluções para manufatura aditiva e impressão 3D, incluindo software de modelagem, sistemas de controle de produção e integração com processos industriais existentes."
-   },
-   {
-      "keywords":[
-         "agritech",
-         "agricultura digital",
-         "agricultura de precisão",
-         "monitoramento agrícola",
-         "automação rural"
-      ],
-      "response":"Implementamos soluções tecnológicas para o agronegócio, combinando IoT, drones e IA para otimizar a produção agrícola, monitorar cultivos e automatizar processos rurais."
-   },
-   {
-      "keywords":[
-         "regtech",
-         "compliance digital",
-         "regulamentação",
-         "conformidade",
-         "gestão de riscos"
-      ],
-      "response":"Oferecemos soluções RegTech para automatizar processos de compliance, monitorar regulamentações e gerenciar riscos regulatórios, garantindo conformidade contínua com legislações e normas."
-   },
-   {
-      "keywords":[
-         "govtech",
-         "governo",
-         "setor público",
-         "gestão pública",
-         "serviços digitais"
-      ],
-      "response":"Desenvolvemos soluções digitais para o setor público, com foco em automação de serviços, transparência e eficiência na gestão de dados públicos, permitindo que governos melhorem o atendimento ao cidadão."
-   },
-   {
-      "keywords":[
-         "supply chain",
-         "logística",
-         "rastreamento",
-         "eficiência",
-         "cadeia de suprimentos"
-      ],
-      "response":"Oferecemos soluções inteligentes para cadeia de suprimentos e logística, utilizando IA e IoT para rastreamento em tempo real e otimização de processos, reduzindo custos e aumentando a eficiência operacional."
-   },
-   {
-      "keywords":[
-         "RPA",
-         "automação de processos",
-         "produtividade",
-         "eficiência",
-         "tarefas repetitivas"
-      ],
-      "response":"Implementamos automação robótica de processos (RPA) para tarefas repetitivas, permitindo que equipes se concentrem em atividades de maior valor agregado e melhorando a produtividade geral."
-   },
-   {
-      "keywords":[
-         "edtech",
-         "educação",
-         "e-learning",
-         "aprendizado adaptativo",
-         "plataformas educacionais"
-      ],
-      "response":"Desenvolvemos plataformas educacionais personalizadas, integrando IA adaptativa, gamificação e análise de desempenho para uma experiência de aprendizado mais envolvente e eficaz."
-   },
-   {
-      "keywords":[
-         "healthtech",
-         "saúde e bem-estar",
-         "monitoramento de saúde",
-         "telemedicina",
-         "wearables"
-      ],
-      "response":"Oferecemos soluções tecnológicas para saúde e bem-estar, incluindo monitoramento de saúde remoto, telemedicina avançada e dispositivos wearables para monitoramento contínuo de pacientes."
-   },
-   {
-      "keywords":[
-         "privacidade",
-         "segurança de dados",
-         "LGPD",
-         "GDPR",
-         "compliance"
-      ],
-      "response":"Nossas soluções de segurança de dados garantem compliance com regulamentações como LGPD e GDPR, incluindo criptografia avançada e protocolos de segurança pós-quântica para proteger dados sensíveis."
-   },
-   {
-      "keywords":[
-         "inclusao digital",
-         "acessibilidade",
-         "tecnologia inclusiva",
-         "tradutor automático",
-         "leitor de tela"
-      ],
-      "response":"Desenvolvemos ferramentas para promover inclusão digital, com funcionalidades como compatibilidade com leitores de tela, teclados acessíveis e traduções automáticas em tempo real para uma experiência inclusiva."
-   },
-   {
-      "keywords":[
-         "correios",
-         "serviços correios",
-         "envio",
-         "entrega",
-         "logística"
-      ],
-      "response":"Os Correios oferecem uma gama de serviços para envio, logística, financeiros e digitais. Qual serviço específico você gostaria de saber mais?"
-   },
-   {
-      "keywords":[
-         "carta",
-         "telegrama",
-         "sedex",
-         "pac",
-         "correspondência",
-         "documento"
-      ],
-      "response":"Os Serviços Postais dos Correios incluem Carta, Telegrama, SEDEX, PAC e Cartão-Resposta. Gostaria de saber mais sobre algum deles?"
-   },
-   {
-      "keywords":[
-         "carta",
-         "telegrama",
-         "correspondência"
-      ],
-      "response":"O serviço de Carta e Telegrama permite enviar correspondências e documentos, com opções expressas para telegrama."
-   },
-   {
-      "keywords":[
-         "sedex",
-         "entrega rápida",
-         "expressa",
-         "sedex hoje",
-         "sedex 10",
-         "sedex 12"
-      ],
-      "response":"O SEDEX oferece entrega rápida com variantes como SEDEX Hoje, SEDEX 10, SEDEX 12, e SEDEX comum. Deseja detalhes sobre algum deles?"
-   },
-   {
-      "keywords":[
-         "pac",
-         "entrega econômica",
-         "econômico"
-      ],
-      "response":"O PAC é um serviço de envio econômico para encomendas, ideal para quem busca custo acessível com prazos maiores."
-   },
-   {
-      "keywords":[
-         "cartão resposta",
-         "resposta",
-         "remetente paga"
-      ],
-      "response":"Com o Cartão-Resposta, o remetente arca com o custo da resposta. É ideal para empresas que recebem documentos e correspondências."
-   },
-   {
-      "keywords":[
-         "logística",
-         "logística reversa",
-         "armazém",
-         "e-commerce"
-      ],
-      "response":"Os Serviços Logísticos dos Correios incluem Logística Reversa e Armazém. Qual deles você gostaria de explorar?"
-   },
-   {
-      "keywords":[
-         "devolução",
-         "retorno",
-         "logística reversa",
-         "reverso"
-      ],
-      "response":"A Logística Reversa permite devolver encomendas ao remetente, sendo muito utilizada no comércio eletrônico."
-   },
-   {
-      "keywords":[
-         "armazém",
-         "armazenagem",
-         "estoque",
-         "distribuição"
-      ],
-      "response":"O Armazém dos Correios oferece armazenagem e distribuição para empresas que necessitam de suporte logístico."
-   },
-   {
-      "keywords":[
-         "banco",
-         "financeiro",
-         "vale postal",
-         "banco postal"
-      ],
-      "response":"Os Correios também oferecem serviços financeiros, como o Banco Postal e o Vale Postal. Qual serviço deseja conhecer?"
-   },
-   {
-      "keywords":[
-         "banco postal",
-         "conta bancária",
-         "pagamento",
-         "serviços bancários"
-      ],
-      "response":"O Banco Postal oferece serviços bancários básicos nas agências dos Correios, incluindo abertura de contas e pagamentos."
-   },
-   {
-      "keywords":[
-         "vale postal",
-         "transferência",
-         "envio de dinheiro"
-      ],
-      "response":"O Vale Postal permite transferir valores para outras localidades, ideal para áreas com acesso limitado a bancos."
-   },
-   {
-      "keywords":[
-         "digital",
-         "documentação",
-         "id correios",
-         "certificado digital",
-         "passaporte"
-      ],
-      "response":"Os Correios também oferecem serviços digitais e de documentação, como o ID Correios e emissão de certificados digitais e passaportes."
-   },
-   {
-      "keywords":[
-         "id correios",
-         "identificação digital",
-         "segurança"
-      ],
-      "response":"O ID Correios é uma identificação digital que facilita o envio e recebimento seguro de encomendas."
-   },
-   {
-      "keywords":[
-         "passaporte",
-         "certificado digital",
-         "documentação"
-      ],
-      "response":"Em parceria com a Polícia Federal, alguns postos dos Correios oferecem a emissão de passaportes e certificados digitais."
-   },
-   {
-      "keywords":[
-         "internacional",
-         "importação",
-         "exportação",
-         "sedex mundi"
-      ],
-      "response":"Para envios internacionais, os Correios oferecem o Exporta Fácil, Importa Fácil, e o SEDEX Mundi. Qual deles você quer saber mais?"
-   },
-   {
-      "keywords":[
-         "exporta fácil",
-         "importa fácil",
-         "envio internacional",
-         "importação",
-         "exportação"
-      ],
-      "response":"O Correio Internacional facilita importação e exportação de mercadorias com as opções Exporta Fácil para exportação e Importa Fácil para importação."
-   },
-   {
-      "keywords":[
-         "sedex mundi",
-         "envio rápido internacional",
-         "documentos internacionais"
-      ],
-      "response":"O SEDEX Mundi permite o envio rápido de documentos e encomendas para outros países com prazos específicos."
-   },
+[
   {
-    "keywords": [
-      "serviços",
-      "consultoria",
-      "soluções digitais",
-      "transformação digital"
-    ],
-    "response": "Na InNovaIdeia, proporcionamos soluções tecnológicas inovadoras e personalizadas, projetadas para acelerar a transformação digital da sua empresa, otimizar processos e impulsionar resultados estratégicos."
+    "keywords": ["ola", "oi", "bom dia", "boa tarde", "boa noite", "saudações", "saudacoes"],
+    "response": "Olá! Como podemos ajudar você hoje? Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes. Fale conosco para saber mais!"
   },
   {
-    "keywords": [
-      "consultoria TI",
-      "TI estratégica",
-      "infraestrutura TI",
-      "gestão TI"
-    ],
-    "response": "Conte com nossos especialistas para transformar sua infraestrutura de TI em um diferencial competitivo. Alinhamos estratégias tecnológicas às metas do seu negócio, otimizamos processos e garantimos uma gestão eficiente e sustentável dos recursos digitais."
+    "keywords": ["serviço", "servico", "serviços", "consultoria", "desenvolvimento"],
+    "response": "Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos para capacitação de equipes."
   },
   {
-    "keywords": [
-      "desenvolvimento de software",
-      "software personalizado",
-      "soluções sob medida",
-      "tecnologia personalizada"
-    ],
-    "response": "Criamos softwares personalizados, projetados para resolver desafios únicos do seu negócio. Nossas soluções aliam inovação, escalabilidade e eficiência, proporcionando vantagem competitiva e otimizando seus processos operacionais."
+    "keywords": ["sobre", "empresa", "história", "historia", "fundação"],
+    "response": "A InNovaIdeia é uma empresa de tecnologia e inovação, fundada para oferecer soluções tecnológicas sob medida, com foco em inovação, automação e inteligência artificial."
   },
   {
-    "keywords": [
-      "treinamentos",
-      "capacitação",
-      "workshops",
-      "tecnologias emergentes",
-      "engenharia de prompt"
-    ],
-    "response": "Oferecemos programas de treinamento e workshops práticos em tecnologias emergentes, como inteligência artificial, engenharia de prompt e automação. Capacite sua equipe para dominar ferramentas inovadoras e enfrentar os desafios digitais com confiança e competência."
+    "keywords": ["contato", "falar", "suporte", "ajuda"],
+    "response": "Você pode nos contatar pelo email: innovaideia2023@gmail.com ou através do telefone (16) 99311-7529 para suporte e consultas."
   },
   {
-    "keywords": [
-      "fundação",
-      "história",
-      "Dione Castro Alves",
-      "experiência em tecnologia"
-    ],
-    "response": "A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com mais de 15 anos de experiência em tecnologia. Com expertise em diversas linguagens de programação, incluindo Java, JavaScript, Python e C, nossa equipe está preparada para enfrentar os desafios do mercado digital e entregar soluções inovadoras e de alto impacto."
+    "keywords": ["projetos", "soluções", "solucoes", "parceria", "implementação", "implementacao"],
+    "response": "Desenvolvemos soluções tecnológicas personalizadas para cada projeto, sempre alinhadas às necessidades de nossos clientes. Entre em contato para discutir uma parceria."
   },
   {
-    "keywords": [
-      "missão",
-      "valores",
-      "objetivos",
-      "propósito"
-    ],
-    "response": "Transformar desafios em oportunidades por meio de soluções inovadoras e sustentáveis, impulsionando o crescimento e a competitividade dos nossos clientes no ambiente digital e além."
+    "keywords": ["inovação", "inovacao", "tecnologia", "tendências", "tendencias", "avançada", "avancada"],
+    "response": "Estamos sempre atualizados com as últimas tendências tecnológicas, como inteligência artificial, automação de processos e soluções em nuvem para negócios."
   },
   {
-    "keywords": [
-      "valores",
-      "nossos valores",
-      "fundamento",
-      "relacionamentos de confiança"
-    ],
-    "response": "Na InNovaIdeia, nossos valores são a base sólida que sustenta cada ação e decisão. Eles nos guiam em todos os projetos, assegurando não apenas resultados de qualidade, mas também relações transparentes e de confiança com nossos clientes e parceiros."
+    "keywords": ["valores", "missão", "missao", "visão", "visao", "ética", "etica"],
+    "response": "Nossos valores incluem inovação contínua, transparência nos negócios, compromisso com a excelência e ética em todas as interações com nossos clientes e parceiros."
   },
   {
-    "keywords": [
-      "inovação",
-      "criatividade",
-      "soluções inovadoras",
-      "tecnologias emergentes"
-    ],
-    "response": "Estimulamos a criatividade em todos os processos e buscamos incessantemente soluções inovadoras que não apenas atendam, mas superem as necessidades e expectativas de nossos clientes, gerando valor real e duradouro."
+    "keywords": ["treinamento", "cursos", "capacitação", "capacita", "workshops"],
+    "response": "Oferecemos treinamentos e workshops voltados para a capacitação de equipes, com temas como programação, gestão de projetos ágeis, e uso de tecnologias emergentes."
   },
   {
-    "keywords": [
-      "transparência",
-      "honestidade",
-      "clareza",
-      "relações transparentes"
-    ],
-    "response": "Agimos com total honestidade e clareza em todas as interações, garantindo comunicação aberta e transparente. Isso nos permite construir relações de confiança mútua, baseadas em respeito e comprometimento com os interesses de nossos clientes e parceiros."
+    "keywords": ["clientes", "cases", "portfolio", "testemunhos"],
+    "response": "Trabalhamos com clientes de diversos setores, oferecendo soluções inovadoras que agregam valor. Confira nossos cases de sucesso para saber mais sobre os projetos que já desenvolvemos."
   },
   {
-    "keywords": [
-      "comprometimento",
-      "dedicação",
-      "prazo",
-      "resultados"
-    ],
-    "response": "Nos dedicamos incansavelmente ao sucesso de nossos clientes, cumprindo prazos rigorosamente e oferecendo soluções personalizadas que geram valor real e sustentável para seus negócios."
+    "keywords": ["equipe", "profissionais", "time", "especialistas"],
+    "response": "Nossa equipe é formada por especialistas altamente capacitados, com experiência em várias áreas da tecnologia, como desenvolvimento de software, IA, e gestão de dados."
   },
   {
-    "keywords": [
-      "excelência",
-      "qualidade",
-      "resultados excepcionais",
-      "detalhes"
-    ],
-    "response": "Nos dedicamos à excelência em todos os processos, personalizando cada solução para garantir que os resultados não apenas atendam, mas realmente superem as necessidades e expectativas dos nossos clientes, criando um impacto positivo e duradouro em seus negócios."
-  }
-]
-}
+    "keywords": ["segurança", "dados", "privacidade", "proteção"],
+    "response": "Priorizamos a segurança e privacidade dos dados em todos os nossos projetos, aplicando as melhores práticas e soluções para garantir a proteção da informação."
+  },
+  {
+    "keywords": ["preços", "precos", "custo", "valor", "orçamento", "orcamento"],
+    "response": "Nossos serviços são personalizados, e o valor depende das necessidades específicas de cada projeto. Entre em contato para solicitar um orçamento sem compromisso."
+  },
+  {
+    "keywords": ["parceiros", "colaboração", "colaboracao", "networking"],
+    "response": "Trabalhamos em colaboração com parceiros estratégicos para fornecer as melhores soluções tecnológicas. Se você deseja se tornar um parceiro, entre em contato!"
+  },
+  {
+    "keywords": ["prazo", "entrega", "deadlines", "projeto"],
+    "response": "Trabalhamos com prazos claros e definidos, sempre com o compromisso de entregar os projetos no tempo acordado e com a máxima qualidade."
+  },
+  {
+    "keywords": ["tecnologias", "ferramentas", "stack", "frameworks", "python", "javascript", "react"],
+    "response": "Utilizamos uma ampla variedade de tecnologias e frameworks, como Python, JavaScript, Flask, React, Bootstrap, e muito mais para atender às necessidades dos projetos."
+  },
+  {
+    "keywords": ["carreiras", "emprego", "oportunidades", "trabalho"],
+    "response": "Estamos sempre em busca de talentos para integrar nossa equipe. Confira nossas vagas abertas e oportunidades de carreira em nosso site ou entre em contato conosco para mais informações."
+  },
+  {
+    "keywords": ["suporte técnico", "suporte tecnico", "manutenção", "manutencao", "atendimento", "helpdesk"],
+    "response": "Oferecemos suporte técnico dedicado e serviços de manutenção para garantir que seus sistemas operem com máxima eficiência. Fale conosco para agendar uma consulta."
+  },
+  {
+    "keywords": ["futuro", "estratégia", "estrategia", "objetivos", "plano"],
+    "response": "Nosso foco é continuar sendo referência em tecnologia e inovação, buscando sempre antecipar as necessidades do mercado e proporcionar soluções de ponta."
+  },
+  {
+    "keywords": ["metodologias", "scrum", "ágil", "agil", "gestão de projetos", "gestao de projetos"],
+    "response": "Adotamos metodologias ágeis, como Scrum e Kanban, para garantir a gestão eficiente de projetos, com entregas contínuas e alinhamento às expectativas dos clientes."
+  },
+  {
+    "keywords": ["feedback", "satisfação", "satisfacao", "opinião", "opiniao", "avaliação", "avaliacao"],
+    "response": "A opinião dos nossos clientes é fundamental para nós. Sempre buscamos melhorar nossos serviços com base em feedbacks e avaliações constantes."
+  },
+  {
+    "keywords": ["sustentabilidade", "responsabilidade", "meio ambiente", "meioambiente", "ecologia"],
+    "response": "Estamos comprometidos com práticas sustentáveis, implementando soluções que minimizam o impacto ambiental e promovem o uso consciente da tecnologia."
+  },
+  {
+    "keywords": ["consultoria estratégica", "consultoria estrategica", "análise de mercado", "analise de mercado", "planejamento", "transformação digital", "transformacao digital"],
+    "response": "Oferecemos consultoria estratégica para auxiliar na transformação digital das empresas, com análise de mercado e planejamento para implementação de novas tecnologias."
+  },
+  {
+    "keywords": ["testes", "qualidade", "garantia", "validação", "validacao"],
+    "response": "Realizamos testes rigorosos de qualidade e validação para garantir que as soluções entregues atendam aos mais altos padrões de desempenho e segurança."
+  },
+  {
+    "keywords": ["customização", "customizacao", "personalização", "personalizacao", "adaptação", "adaptacao", "flexibilidade"],
+    "response": "Nossas soluções são altamente personalizáveis, desenvolvidas de acordo com as necessidades específicas de cada cliente, garantindo flexibilidade e adaptação ao seu negócio."
+  },
+  {
+    "keywords": ["infraestrutura", "servidores", "cloud", "hospedagem"],
+    "response": "Oferecemos soluções completas de infraestrutura, desde a gestão de servidores locais até o desenvolvimento e hospedagem em ambientes de cloud computing."
+  },
+  {
+    "keywords": ["cultura", "ambiente de trabalho", "valores corporativos", "diversidade"],
+    "response": "Na InNovaIdeia, promovemos um ambiente de trabalho inclusivo e colaborativo, onde a diversidade de ideias e experiências é valorizada e impulsiona nossa inovação contínua."
+  },
+  {
+    "keywords": ["parceria estratégica", "parceria estrategica", "alianças", "aliancas", "cooperação", "cooperacao", "joint venture"],
+    "response": "Estabelecemos parcerias estratégicas e alianças com outras empresas e instituições, fortalecendo nossa capacidade de entregar soluções tecnológicas inovadoras e robustas."
+  },
+  {
+    "keywords": ["fidelidade", "relacionamento", "clientes recorrentes", "programa de fidelidade"],
+    "response": "Valorizamos nossos clientes recorrentes e oferecemos programas de fidelidade que garantem vantagens exclusivas e suporte contínuo para projetos de longo prazo."
+  },
+  {
+    "keywords": ["inovação contínua", "inovacao continua", "pesquisa", "desenvolvimento", "R&D"],
+    "response": "Investimos constantemente em pesquisa e desenvolvimento para explorar novas tecnologias e soluções inovadoras, garantindo que nossos clientes sempre estejam à frente do mercado."
+  },
+  {
+    "keywords": ["melhorias contínuas", "melhorias continuas", "otimização", "otimizacao", "eficiência", "eficiencia", "performance"],
+    "response": "Nosso foco está em entregar soluções que sejam não apenas funcionais, mas também otimizadas para performance, escalabilidade e eficiência a longo prazo."
+  },
+  {
+    "keywords": ["escalabilidade", "crescimento", "expansão", "expansao", "futuro"],
+    "response": "Desenvolvemos soluções escaláveis que acompanham o crescimento de sua empresa, garantindo que suas necessidades tecnológicas sejam atendidas conforme seu negócio se expande."
+  },
+  {
+    "keywords": ["suporte contínuo", "suporte continuo", "atualizações", "atualizacoes", "manutenção preventiva", "manutencao preventiva", "monitoramento"],
+    "response": "Oferecemos suporte contínuo com serviços de manutenção preventiva e monitoramento, assegurando que seus sistemas estejam sempre atualizados e funcionando perfeitamente."
+  },
+  {
+    "keywords": ["user experience", "UX", "UI", "experiência do usuário", "experiencia do usuario"],
+    "response": "Desenvolvemos interfaces intuitivas e focadas na experiência do usuário (UX), garantindo que seus clientes interajam de maneira eficiente e agradável com suas soluções."
+  },
+  {
+    "keywords": ["responsabilidade social", "projetos sociais", "comunidade", "impacto social"],
+    "response": "Apoiamos iniciativas de responsabilidade social e buscamos ativamente participar de projetos que gerem impacto positivo nas comunidades onde atuamos."
+  },
+  {
+    "keywords": ["competitividade", "mercado", "diferencial", "vantagem"],
+    "response": "Nossa expertise em tecnologia e inovação oferece uma vantagem competitiva aos nossos clientes, permitindo que eles se destaquem no mercado com soluções diferenciadas."
+  },
+  {
+    "keywords": ["transformação digital", "transformacao digital", "digitalização", "digitalizacao", "automação", "automacao", "inovação tecnológica", "inovacao tecnologica"],
+    "response": "Ajudamos empresas a navegar pela transformação digital, automatizando processos e implementando inovações tecnológicas que impulsionam a eficiência e a competitividade."
+  },
+  {
+    "keywords": ["consultoria em IA", "inteligência artificial", "inteligencia artificial", "machine learning", "automação inteligente", "automacao inteligente"],
+    "response": "Fornecemos consultoria especializada em inteligência artificial e machine learning, desenvolvendo soluções de automação inteligente para otimizar operações e melhorar a tomada de decisões."
+  },
+  {
+    "keywords": ["big data", "análise de dados", "analise de dados", "data science", "gestão de dados", "gestao de dados"],
+    "response": "Oferecemos soluções em análise de dados e ciência de dados (Data Science), ajudando as empresas a tomar decisões mais informadas com base em big data e insights precisos."
+  },
+  {
+    "keywords": ["metodologias de inovação", "metodologias de inovacao", "design thinking", "lean startup", "prototipagem"],
+    "response": "Utilizamos metodologias como Design Thinking e Lean Startup para promover a inovação dentro das empresas, desde a concepção de ideias até a prototipagem rápida de soluções."
+  },
+  {
+    "keywords": ["prototipagem", "prototipagem rápida", "prototipagem rapida", "MVP", "produto mínimo viável", "produto minimo viavel"],
+    "response": "Desenvolvemos protótipos rápidos e produtos mínimos viáveis (MVP) para validar ideias de negócios e tecnologias com agilidade, permitindo testes e ajustes antes de grandes investimentos."
+  },
+  {
+    "keywords": ["desenvolvimento ágil", "desenvolvimento agil", "scrum", "kanban", "sprints"],
+    "response": "Utilizamos metodologias ágeis, como Scrum e Kanban, organizando o desenvolvimento em sprints, o que garante entregas rápidas e contínuas para adaptar-se às mudanças nas necessidades do projeto."
+  },
+  {
+    "keywords": ["API", "integrações", "integrações", "serviços web", "servicos web", "APIs REST"],
+    "response": "Desenvolvemos e integramos APIs RESTful para facilitar a comunicação entre sistemas e serviços, garantindo uma integração robusta e escalável para suas soluções de software."
+  },
+  {
+    "keywords": ["prototipagem de interfaces", "UI", "wireframes", "mockups"],
+    "response": "Criamos protótipos de interfaces utilizando ferramentas de wireframes e mockups para garantir que a experiência do usuário seja eficiente e que as funcionalidades sejam bem implementadas."
+  },
+  {
+    "keywords": ["frameworks de front-end", "React", "Vue.js", "Angular"],
+    "response": "Trabalhamos com os principais frameworks de front-end, como React, Vue.js e Angular, para desenvolver interfaces dinâmicas e responsivas, sempre focadas na experiência do usuário."
+  },
+  {
+    "keywords": ["versionamento de código", "versionamento de codigo", "Git", "GitHub", "controle de versão", "controle de versao"],
+    "response": "Utilizamos ferramentas de versionamento de código, como Git e GitHub, para garantir a rastreabilidade das mudanças e facilitar o trabalho colaborativo em equipe durante o desenvolvimento de software."
+  },
+  {
+    "keywords": ["CI/CD", "integração contínua", "integração continua", "deploy contínuo", "deploy continuo", "automação de build", "automacao de build"],
+    "response": "Adotamos práticas de Integração Contínua (CI) e Deploy Contínuo (CD) para automatizar processos de build e deploy, acelerando o ciclo de desenvolvimento e garantindo a qualidade do código."
+  },
+  {
+    "keywords": ["banco de dados", "SQL", "NoSQL", "modelagem de dados"],
+    "response": "Desenvolvemos soluções com bancos de dados SQL e NoSQL, realizando a modelagem de dados adequada para cada tipo de aplicação, com foco em eficiência e escalabilidade."
+  },
+  {
+    "keywords": ["testes automatizados", "TDD", "testes unitários", "testes unitarios", "cobertura de testes"],
+    "response": "Implementamos testes automatizados e utilizamos práticas de Test Driven Development (TDD) para garantir a confiabilidade e a qualidade do software ao longo do processo de desenvolvimento."
+  },
+  {
+    "keywords": ["DevOps", "automação", "automacao", "infraestrutura como código", "infraestrutura como codigo", "containers"],
+    "response": "Adotamos práticas DevOps, como automação e infraestrutura como código, utilizando containers (Docker) para gerenciar e escalar ambientes de desenvolvimento e produção."
+  },
+  {
+    "keywords": ["documentação", "documentacao", "manual de código", "manual de codigo", "wiki de projetos", "anotações técnicas", "anotacoes tecnicas", "relatórios", "relatorios"],
+    "response": "Priorizamos a documentação clara e organizada do código, com manuais detalhados e wikis de projetos, para garantir que as equipes possam manter e evoluir o software facilmente."
+  },
+  {
+    "keywords": ["UX em programação", "UX em programacao", "design centrado no usuário", "design centrado no usuario", "testes de usabilidade", "ux"],
+    "response": "Integramos práticas de UX no desenvolvimento de software, com foco em design centrado no usuário e realização de testes de usabilidade para garantir que o produto atenda às expectativas do cliente final."
+  },
+  {
+    "keywords": ["prototipagem em HTML/CSS", "design responsivo", "Bootstrap", "material design"],
+    "response": "Realizamos prototipagem de interfaces utilizando HTML, CSS e frameworks como Bootstrap e Material Design, criando layouts responsivos que se adaptam a diferentes dispositivos."
+  },
+  {
+    "keywords": ["aplicativos", "app", "soluções", "solucoes"],
+    "response": "Sim, oferecemos soluções totalmente personalizadas, adaptadas às necessidades e objetivos da sua empresa. Nossa equipe trabalha em estreita colaboração com o cliente para garantir que o projeto atenda a todos os requisitos específicos."
+  },
+  {
+    "keywords": ["tecnologia", "programação", "programacao", "inovação", "inovacao", "soluções", "solucoes"],
+    "response": "A InNovaIdeia, fundada por Dione Castro Alves, é especializada em tecnologia e oferece consultoria em TI, desenvolvimento de software personalizado e treinamentos para capacitação de equipes. Estamos prontos para atender às suas necessidades!"
+  },
+  {
+    "keywords": ["equipe", "experiência", "experiencia", "especialistas", "tecnologia"],
+    "response": "Nossa equipe é composta por especialistas com vasta experiência em tecnologias como Java, JavaScript, Python e C, prontos para enfrentar os desafios do mercado digital."
+  },
+  {
+    "keywords": ["abordagem", "personalizada", "soluções", "solucoes", "clientes"],
+    "response": "Na InNovaIdeia, nos destacamos por nossa abordagem personalizada, oferecendo soluções inovadoras que atendem às necessidades específicas de cada cliente."
+  },
+  {
+    "keywords": ["transformação", "transformacao", "digital", "inovação", "inovacao", "eficiência", "eficiencia"],
+    "response": "Estamos comprometidos com a transformação digital das empresas, proporcionando soluções que aumentam a eficiência e promovem a inovação."
+  },
+  {
+    "keywords": ["qualidade", "serviço", "servico", "atendimento", "satisfação", "satisfacao"],
+    "response": "Nosso compromisso é garantir a qualidade dos serviços prestados e a satisfação dos nossos clientes em cada projeto que realizamos."
+  },
+  {
+    "keywords": ["coaching", "PNL", "inovação", "inovacao", "desenvolvimento humano", "potencializar habilidades"],
+    "response": "Na InNovaIdeia, acreditamos que o desenvolvimento humano e a inovação caminham lado a lado. Oferecemos programas de Coaching com Programação Neurolinguística (PNL) para capacitar pessoas e organizações, promovendo autoconhecimento e mentalidade de crescimento. Se você busca potencializar suas habilidades e alcançar resultados excepcionais, nossos programas podem ser o diferencial em sua trajetória."
+  },
+  {
+    "keywords": ["blockchain", "web3", "smart contracts", "criptomoedas"],
+    "response": "Oferecemos soluções em blockchain e desenvolvimento Web3, incluindo smart contracts, DApps e integração com criptomoedas para empresas que buscam inovação em tecnologias descentralizadas."
+  },
+  {
+    "keywords": ["IoT", "internet das coisas", "sensores", "automação industrial", "automacao industrial"],
+    "response": "Desenvolvemos soluções de IoT que conectam dispositivos físicos à internet, permitindo monitoramento em tempo real, automação industrial e coleta de dados para otimização de processos."
+  },
+  {
+    "keywords": ["realidade virtual", "VR", "AR", "realidade aumentada", "metaverso"],
+    "response": "Criamos experiências imersivas em realidade virtual e aumentada, desde treinamentos corporativos até aplicações para o metaverso, revolucionando a forma como as empresas interagem com seus clientes."
+  },
+  {
+    "keywords": ["pentesting", "análise de vulnerabilidades", "analise de vulnerabilidades", "segurança ofensiva", "seguranca ofensiva", "LGPD"],
+    "response": "Realizamos testes de penetração, análise de vulnerabilidades e implementamos soluções de segurança em conformidade com a LGPD, protegendo seus ativos digitais contra ameaças cibernéticas."
+  },
+  {
+    "keywords": ["edge computing", "computação de borda", "computacao de borda", "latência", "latencia", "processamento distribuído", "processamento distribuido"],
+    "response": "Implementamos soluções de edge computing para processar dados mais próximo da fonte, reduzindo latência e custos de bandwidth, ideal para aplicações que necessitam de resposta em tempo real."
+  },
+  {
+    "keywords": ["computação quântica", "computacao quantica", "algoritmos quânticos", "algoritmos quanticos", "qubits", "quantum computing"],
+    "response": "Exploramos as possibilidades da computação quântica para otimização de algoritmos e resolução de problemas complexos, preparando sua empresa para a próxima revolução computacional com consultoria especializada e dese
