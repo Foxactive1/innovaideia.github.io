@@ -1,81 +1,53 @@
+
 let responses = [];
 
 // Configurações do Chatbot
 const API_KEY = 'AIzaSyCi-wO4LVDcl7oYydhKkfa6qKvg1lK0d5w';
+
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
-// Carregar o arquivo responses.json
-async function loadResponses() {
-  try {
-    const response = await $.getJSON("./responses.json");
-    if (Array.isArray(response)) {
-      responses = response;
-    } else {
-      console.error("O arquivo responses.json não contém um array válido.");
-      $('#chat-log').append('<div><strong>Erro:</strong> O arquivo de respostas não está formatado corretamente.</div>');
-    }
-  } catch (error) {
-    console.error("Erro ao carregar o arquivo responses.json:", error);
-    $('#chat-log').append('<div><strong>Erro:</strong> Não foi possível carregar as respostas do chatbot.</div>');
-  }
+// Função para enviar a mensagem
+async function sendMessage() {
+  const userInput = document.getElementById('user-input').value;
+  if (userInput.trim() === '') return;
+
+  // Adicionar mensagem do usuário ao chat
+  const userMessageElement = document.createElement('div');
+  userMessageElement.className = 'user-message';
+  userMessageElement.innerText = userInput;
+  document.getElementById('chat-log').appendChild(userMessageElement);
+
+  // Limpar campo de entrada
+  document.getElementById('user-input').value = '';
+
+  // Exibir mensagem de "Pensando..."
+  const thinkingMessageElement = document.createElement('div');
+  thinkingMessageElement.className = 'bot-message';
+  thinkingMessageElement.innerText = 'Pensando...';
+  document.getElementById('chat-log').appendChild(thinkingMessageElement);
+
+  // Rolar para o final do chat
+  document.getElementById('chat-log').scrollTop = document.getElementById('chat-log').scrollHeight;
+
+  // Obter resposta da API Gemini
+  const botResponse = await getGeminiResponse(userInput);
+
+  // Remover mensagem de "Pensando..."
+  document.getElementById('chat-log').removeChild(thinkingMessageElement);
+
+  // Adicionar resposta do chatbot ao chat
+  const botMessageElement = document.createElement('div');
+  botMessageElement.className = 'bot-message';
+  botMessageElement.innerText = botResponse;
+  document.getElementById('chat-log').appendChild(botMessageElement);
+
+  // Rolar para o final do chat
+  document.getElementById('chat-log').scrollTop = document.getElementById('chat-log').scrollHeight;
 }
 
-// Função para buscar a resposta do chatbot com base em palavras-chave
-async function getChatbotResponse(message) {
-  const lowerMessage = message.toLowerCase();
-
-  // Procurar se alguma palavra-chave está contida na mensagem
-  for (let item of responses) {
-    if (Array.isArray(item.keywords)) {
-      for (let keyword of item.keywords) {
-        if (lowerMessage.includes(keyword)) {
-          return item.response;
-        }
-      }
-    } else {
-      console.warn("A chave 'keywords' não é um array no item: ", item);
-    }
-  }
-
-  // Se não encontrar palavras-chave, usar o modelo de classificação de texto
-  return await classifyTextWithModel(message);
-}
-
-// Função para usar o modelo de classificação de texto (Transformers.js ou TensorFlow.js)
-async function classifyTextWithModel(message) {
-  try {
-    const model = await transformers.loadModel('facebook/bart-large-mnli');
-    const candidateLabels = ["serviço", "consultoria", "coaching", "inovação", "PNL"];
-    const result = await model(message, candidateLabels);
-
-    // Obter a categoria mais provável
-    const predictedLabel = result.labels[0];
-
-    // Responder com base na categoria prevista
-    switch (predictedLabel) {
-      case "serviço":
-        return "Oferecemos consultoria especializada em TI, desenvolvimento de software personalizado e treinamentos técnicos.";
-      case "consultoria":
-        return "A consultoria é um dos nossos maiores focos, ajudamos empresas com soluções personalizadas.";
-      case "coaching":
-        return "Na InNovaIdeia, acreditamos no desenvolvimento humano e na inovação através de Coaching com PNL.";
-      case "PNL":
-        return "PNL é uma ferramenta poderosa para o desenvolvimento pessoal e profissional, e utilizamos esse recurso em nossos programas.";
-      default:
-        return await getGeminiResponse(message);
-    }
-  } catch (error) {
-    console.error("Erro ao classificar texto com modelo:", error);
-    return "Desculpe, ocorreu um erro ao processar sua mensagem.";
-  }
-}
-
-// Função para obter resposta da API do Gemini IA
+// Função para obter resposta da API Gemini
 async function getGeminiResponse(message) {
   try {
-    $('#chat-log').append('<div><strong>Chatbot:</strong> Pensando...</div>');
-
-    // Simulação de chamada à API do Gemini IA
     const response = await fetch(`${API_URL}?key=${API_KEY}`, {
       method: 'POST',
       headers: {
@@ -92,48 +64,28 @@ async function getGeminiResponse(message) {
 
     // Verifica se há candidatos na resposta
     if (data.candidates && data.candidates.length > 0) {
-      const aiResponse = data.candidates[0].content.parts[0].text;
-      return aiResponse;
+      return data.candidates[0].content.parts[0].text;
     } else {
       return 'Desculpe, não consegui gerar uma resposta.';
     }
   } catch (error) {
-    console.error("Erro ao obter resposta da API do Gemini IA:", error);
+    console.error("Erro ao obter resposta da API Gemini:", error);
     return "Desculpe, ocorreu um erro ao processar sua mensagem.";
-  } finally {
-    // Remover a mensagem "Pensando..."
-    $('#chat-log').children().last().remove();
   }
 }
 
-// Função para enviar a mensagem
-async function sendMessage() {
-  const userMessage = $('#user-input').val();
-  $('#user-input').focus();
-  if (userMessage.trim() !== '') {
-    $('#chat-log').append('<div><strong>Você:</strong> ' + userMessage + '</div>');
-    $('#user-input').val('');
+// Configurar eventos para enviar mensagens
+document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('user-input').addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') sendMessage();
+});
 
-    // Simulação de resposta do chatbot
-    setTimeout(async () => {
-      const response = await getChatbotResponse(userMessage);  // Espera pela resposta
-      $('#chat-log').append('<div><strong>Chatbot:</strong> ' + response + '</div>');
-      $('#chat-log').scrollTop($('#chat-log')[0].scrollHeight); // Rolagem automática
-    }, 500);
-  }
-}
+// Função para alternar a exibição do chatbot
+document.getElementById('toggle-chat-btn').addEventListener('click', () => {
+  $('#chatModal').modal('show');
+});
 
-$(document).ready(async function() {
-  await loadResponses();
-
-  // Enviar mensagem ao clicar no botão
-  $('#send-btn').click(sendMessage);
-
-  // Enviar mensagem ao pressionar "Enter"
-  $('#user-input').keypress(function(event) {
-    if (event.which === 13) { // Código para Enter
-      sendMessage();
-      event.preventDefault(); // Evita quebra de linha no campo de entrada
-    }
-  });
+// Função para fechar o modal do chatbot
+document.getElementById('chatModal').addEventListener('hidden.bs.modal', () => {
+  document.getElementById('chat-log').innerHTML = '';
 });
