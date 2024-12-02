@@ -1,111 +1,91 @@
+
 let responses = [];
 
-// Carrega o arquivo JSON com as respostas do chatbot
-async function loadResponses() {
-  try {
-    const response = await fetch("responses.json");
-    if (!response.ok) {
-      throw new Error("Erro ao carregar o JSON");
-    }
-    responses = await response.json();
-  } catch (error) {
-    handleError(error);
-  }
-}
+// Configurações do Chatbot
+const API_KEY = 'AIzaSyCi-wO4LVDcl7oYydhKkfa6qKvg1lK0d5w';
 
-// Exibe mensagens no chat
-function displayMessage(type, message) {
-  const chatLog = document.getElementById("chat-log");
-  const messageElement = document.createElement("div");
-  const icon = getMessageIcon(type);
-  messageElement.innerHTML = `${icon} <strong>${type}:</strong> ${message}`;
-  chatLog.appendChild(messageElement);
-  smoothScroll(chatLog);
-}
+const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent';
 
-// Retorna o ícone correspondente ao tipo da mensagem
-function getMessageIcon(type) {
-  switch (type) {
-    case "Você": return "👤";
-    case "Chatbot": return "🤖";
-    default: return "⚠️";
-  }
-}
-
-// Função para rolagem suave no chat
-function smoothScroll(element) {
-  element.scrollTo({ top: element.scrollHeight, behavior: "smooth" });
-}
-
-// Função para obter a resposta do chatbot
-function getChatbotResponse(userMessage) {
-  const lowerMessage = userMessage.toLowerCase();
-
-  for (let item of responses) {
-    for (let keyword of item.keywords) {
-      if (lowerMessage.includes(keyword.toLowerCase())) {
-        return item.response;
-      }
-    }
-  }
-
-  return 'Desculpe, não entendi. Poderia reformular sua pergunta?';
-}
-
-// Envia a mensagem do usuário e responde
+// Função para enviar a mensagem
 async function sendMessage() {
-  const userInput = document.getElementById("user-input");
-  const userMessage = userInput.value.trim();
+  const userInput = document.getElementById('user-input').value;
+  if (userInput.trim() === '') return;
 
-  if (userMessage) {
-    displayMessage("Você", userMessage);
-    userInput.value = '';  // Limpa o campo de entrada
+  // Adicionar mensagem do usuário ao chat
+  const userMessageElement = document.createElement('div');
+  userMessageElement.className = 'user-message';
+  userMessageElement.innerText = userInput;
+  document.getElementById('chat-log').appendChild(userMessageElement);
 
-    // Espera meio segundo para responder
-    setTimeout(() => {
-      const response = getChatbotResponse(userMessage);
-      displayMessage("Chatbot", response);
-    }, 500);
+  // Limpar campo de entrada
+  document.getElementById('user-input').value = '';
+
+  // Exibir mensagem de "Pensando..."
+  const thinkingMessageElement = document.createElement('div');
+  thinkingMessageElement.className = 'bot-message';
+  thinkingMessageElement.innerText = 'Pensando...';
+  document.getElementById('chat-log').appendChild(thinkingMessageElement);
+
+  // Rolar para o final do chat
+  document.getElementById('chat-log').scrollTop = document.getElementById('chat-log').scrollHeight;
+
+  // Obter resposta da API Gemini
+  const botResponse = await getGeminiResponse(userInput);
+
+  // Remover mensagem de "Pensando..."
+  document.getElementById('chat-log').removeChild(thinkingMessageElement);
+
+  // Adicionar resposta do chatbot ao chat
+  const botMessageElement = document.createElement('div');
+  botMessageElement.className = 'bot-message';
+  botMessageElement.innerText = botResponse;
+  document.getElementById('chat-log').appendChild(botMessageElement);
+
+  // Rolar para o final do chat
+  document.getElementById('chat-log').scrollTop = document.getElementById('chat-log').scrollHeight;
+}
+
+// Função para obter resposta da API Gemini
+async function getGeminiResponse(message) {
+  try {
+    const response = await fetch(`${API_URL}?key=${API_KEY}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{ text: message }]
+        }]
+      })
+    });
+
+    const data = await response.json();
+
+    // Verifica se há candidatos na resposta
+    if (data.candidates && data.candidates.length > 0) {
+      return data.candidates[0].content.parts[0].text;
+    } else {
+      return 'Desculpe, não consegui gerar uma resposta.';
+    }
+  } catch (error) {
+    console.error("Erro ao obter resposta da API Gemini:", error);
+    return "Desculpe, ocorreu um erro ao processar sua mensagem.";
   }
 }
 
-// Função para exibir o erro
-function handleError(error) {
-  const chatLog = document.getElementById("chat-log");
-  displayMessage("Erro", "Não foi possível carregar as respostas do chatbot.");
-}
+// Configurar eventos para enviar mensagens
+document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('user-input').addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') sendMessage();
+});
 
-// Inicializa o chatbot
-document.addEventListener("DOMContentLoaded", () => {
-  const sendButton = document.getElementById("send-btn");
-  const userInput = document.getElementById("user-input");
-  const toggleChatButton = document.getElementById("toggle-chat-btn");
+// Função para alternar a exibição do chatbot
+document.getElementById('toggle-chat-btn').addEventListener('click', () => {
+  $('#chatModal').modal('show');
+});
 
-  // Carrega as respostas assim que a página carrega
-  loadResponses();
-
-  // Configura o botão de envio
-  sendButton.addEventListener("click", sendMessage);
-
-  // Configura envio ao pressionar Enter
-  userInput.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      sendMessage();
-      event.preventDefault();
-    }
-  });
-
-  // Configura o botão para exibir/ocultar o chat
-  toggleChatButton.addEventListener("click", () => {
-    const chatbox = document.getElementById("chatbox");
-    chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
-
-    if (chatbox.style.display === "block") {
-      const chatLog = document.getElementById("chat-log");
-      if (chatLog.children.length === 0) {
-        displayMessage("Chatbot", "Olá! Como posso ajudá-lo hoje?");
-      }
-      userInput.focus();
-    }
-  });
+// Função para fechar o modal do chatbot
+document.getElementById('chatModal').addEventListener('hidden.bs.modal', () => {
+  document.getElementById('chat-log').innerHTML = '';
 });
