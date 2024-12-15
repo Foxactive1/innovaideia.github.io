@@ -8,269 +8,115 @@
     <meta property="og:title" content="Portfólio de Dione Castro Alves">
     <meta property="og:description" content="Transformando ideias em soluções inovadoras com tecnologia. Confira meus projetos, certificações e experiências.">
     <meta property="og:image" content="logo_portifolio.jpg">
-    <meta property="og:url" content="https://innovaideia-github-io.vercel.app"/>
+    <meta property="og:url" content="https://www.seusite.com.br">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Estilos personalizados */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
         body {
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, #4facfe, #00f2fe);
             min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: #fff;
-            padding: 20px;
         }
 
         .container {
-            width: 100%;
             max-width: 1200px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 40px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
 
-        h1,
-        h2,
-        p {
-            text-align: center;
+        h1, h2, p {
             margin-bottom: 20px;
         }
 
-        .container img {
-            display: block;
-            margin: 0 auto 20px;
-            width: 120px;
-            border-radius: 50%;
-            border: 2px solid #fff;
-        }
-
-        /* Sobre Mim */
-        .about {
-            margin: 40px 0;
-        }
-
         .about p {
-            max-width: 800px;
-            margin: 0 auto;
             font-size: 18px;
             line-height: 1.6;
         }
 
-        /* Projetos */
-        .projects .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            font-size: 16px;
-            line-height: 1.4;
-        }
-
-        .project-card a {
-            color: #fff;
-            font-weight: 600;
-            text-decoration: none;
-            border: 1px solid #fff;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-
-        .project-card a:hover {
-            background-color: #fff;
-            color: #333;
-        }
-
-        /* Depoimentos */
-        .testimonials {
+        .projects, .certifications {
             margin: 40px 0;
         }
 
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
+        .projects .project-card, .certifications ul li {
+            margin: 10px 0;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-        }
-
-        /* Certificações */
-        .certifications {
-            margin: 40px 0;
-        }
-
-        .certifications ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .certifications li {
             background: rgba(255, 255, 255, 0.1);
-            margin-bottom: 10px;
-            padding: 10px;
             border-radius: 10px;
-            font-size: 16px;
         }
 
-        /* Redes Sociais */
-        .social-links {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .social-btn {
-            background: rgba(255, 255, 255, 0.2);
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
             padding: 10px 20px;
+            border: 1px solid #fff;
             border-radius: 30px;
             color: #fff;
-            margin: 5px;
             text-decoration: none;
-            font-size: 18px;
             transition: all 0.3s;
         }
 
-        .social-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Botão Flutuante WhatsApp */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25d366;
-            color: #fff;
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 24px;
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            background: #128c7e;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .section h2 {
-                font-size: 24px;
-            }
-
-            .about p {
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .about p {
-                font-size: 14px;
-            }
-
-            .card h3 {
-                font-size: 18px;
-            }
+        .social-links a:hover {
+            background: #fff;
+            color: #333;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <img src="logo_portifolio.jpg" alt="Logo">
-        
+        <img src="logo_portifolio.jpg" alt="Logo" style="width: 120px; border-radius: 50%; margin-bottom: 20px;">
         <h1>Bem-vindo ao Meu Portfólio</h1>
         <p>Transformando ideias em soluções inovadoras com tecnologia.</p>
 
         <section class="about">
             <h2>Sobre Mim</h2>
-            <p>Olá, sou Dione Castro Alves, apaixonado por tecnologia e inovação. Trabalho com desenvolvimento de software, consultoria e criação de soluções personalizadas. Meu objetivo é ajudar empresas a alcançar seu máximo potencial através da tecnologia.</p>
+            <p>Olá! Sou <strong>Dione Castro Alves</strong>, especialista em desenvolvimento de software, inovação tecnológica e soluções personalizadas.  
+                Como fundador da <strong>InNovaIdeia</strong>, ajudo empresas a alcançar seu máximo potencial por meio da tecnologia, oferecendo consultoria, treinamento e desenvolvimento de soluções que impactam.</p>
+            <p>Tenho ampla experiência com tecnologias como Python, Flask, React, Docker e bancos de dados como SQLite e PostgreSQL. Também aplico inteligência artificial ao varejo, personalizando experiências e prevendo tendências. Meu objetivo é sempre oferecer soluções inovadoras e escaláveis que transformem ideias em realidade.</p>
         </section>
 
         <section class="projects">
             <h2>Meus Projetos</h2>
-            <div class="cards">
-                <div class="project-card">
-                    <h3>Projeto A</h3>
-                    <p>Descrição breve do projeto, tecnologias usadas, e o impacto ou resultado obtido. Este projeto foi desenvolvido com as mais recentes ferramentas para garantir um excelente desempenho.</p>
-                    <a href="https://github.com/usuário/projetoA" target="_blank">Ver no GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Projeto B</h3>
-                    <p>Descrição breve do projeto, tecnologias usadas, e o impacto ou resultado obtido. A implementação das melhores práticas foi fundamental para alcançar os objetivos do cliente.</p>
-                    <a href="https://github.com/usuário/projetoB" target="_blank">Ver no GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>Projeto C</h3>
-                    <p>Este projeto visou otimizar processos e introduzir inovações no mercado. Utilizamos IA para melhorar a experiência do usuário e aumentar a eficiência operacional.</p>
-                    <a href="https://github.com/usuário/projetoC" target="_blank">Ver no GitHub</a>
-                </div>
+            <div class="project-card">
+                <h3>Projeto A</h3>
+                <p>Descrição breve do projeto, tecnologias usadas e o impacto ou resultado obtido.</p>
+                <a href="https://github.com/usuario/projetoA" target="_blank">Ver no GitHub</a>
             </div>
-        </section>
-
-        <section class="testimonials">
-            <h2>O que dizem sobre mim</h2>
-            <div class="testimonial-card">
-                <p>"Dione é um profissional altamente qualificado, com grande conhecimento em desenvolvimento e inovação." - Cliente A</p>
-            </div>
-            <div class="testimonial-card">
-                <p>"Trabalhei com Dione em diversos projetos, e sua habilidade em integrar tecnologias novas é impressionante." - Colega B</p>
+            <div class="project-card">
+                <h3>Projeto B</h3>
+                <p>Descrição breve do projeto, tecnologias usadas e o impacto ou resultado obtido.</p>
+                <a href="https://github.com/usuario/projetoB" target="_blank">Ver no GitHub</a>
             </div>
         </section>
 
         <section class="certifications">
             <h2>Certificações</h2>
             <ul>
-                <li>Certificação em Desenvolvimento Web (Coursera)</li>
-                <li>Certificação em Inteligência Artificial (edX)</li>
-                <li>Certificação em Blockchain (Udemy)</li>
-                <li>Certificação em Cloud Computing (AWS)</li>
+                <li>Certificação em Desenvolvimento Web - Coursera</li>
+                <li>Certificação em Inteligência Artificial - edX</li>
+                <li>Cursos Avançados em Python e Flask - Alura e Udemy</li>
+                <li>Certificação de Empreendedorismo e Inovação - Sebrae</li>
             </ul>
         </section>
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/innovaideia2023" target="_blank" class="social-btn">LinkedIn</a>
-            <a href="mailto:innovaideia2023@gmail.com" class="social-btn">E-mail</a>
-            <a href="https://github.com/Foxactive1/Foxactive1" target="_blank" class="social-btn">GitHub</a>
-        </div>
+        <section class="social-links">
+            <h2>Conecte-se Comigo</h2>
+            <a href="https://www.linkedin.com/in/innovaideia2023" target="_blank">LinkedIn</a>
+            <a href="mailto:innovaideia2023@gmail.com">E-mail</a>
+            <a href="https://github.com/Foxactive1/Foxactive1" target="_blank">GitHub</a>
+            <a href="https://wa.me/5516993117529" target="_blank">WhatsApp</a>
+        </section>
     </div>
-
-    <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/5516993117529" target="_blank" class="whatsapp-btn">
-        <i class="bx bxl-whatsapp"></i>
-    </a>
 </body>
 
 </html>
