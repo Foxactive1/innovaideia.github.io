@@ -1,0 +1,51 @@
+[
+    {
+        "type": "about",
+        "title": "Sobre Mim",
+        "description": "Olá! Sou Dione Castro Alves, especialista em desenvolvimento de software, inovação tecnológica e soluções personalizadas. Como fundador da InNovaIdeia, ajudo empresas a alcançar seu máximo potencial por meio da tecnologia, oferecendo consultoria, treinamento e desenvolvimento de soluções que impactam.",
+        "additional_info": "Tenho ampla experiência com tecnologias como Python, Flask, React, Docker e bancos de dados como SQLite e PostgreSQL. Também aplico inteligência artificial ao varejo, personalizando experiências e prevendo tendências. Meu objetivo é sempre oferecer soluções inovadoras e escaláveis que transformem ideias em realidade."
+    },
+    {
+        "type": "project",
+        "title": "Projeto A",
+        "description": "Descrição breve do projeto, tecnologias usadas e o impacto ou resultado obtido.",
+        "link": "https://github.com/usuario/projetoA"
+    },
+    {
+        "type": "project",
+        "title": "Projeto B",
+        "description": "Descrição breve do projeto, tecnologias usadas e o impacto ou resultado obtido.",
+        "link": "https://github.com/usuario/projetoB"
+    },
+    {
+        "type": "certification",
+        "certifications": [
+            "Certificação em Desenvolvimento Web - Coursera",
+            "Certificação em Inteligência Artificial - edX",
+            "Cursos Avançados em Python e Flask - Alura e Udemy",
+            "Certificação de Empreendedorismo e Inovação - Sebrae"
+        ]
+    },
+    {
+        "type": "contact",
+        "title": "Conecte-se Comigo",
+        "links": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/innovaideia2023"
+            },
+            {
+                "name": "E-mail",
+                "url": "mailto:innovaideia2023@gmail.com"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/Foxactive1/Foxactive1"
+            },
+            {
+                "name": "WhatsApp",
+                "url": "https://wa.me/5516993117529"
+            }
+        ]
+    }
+]
