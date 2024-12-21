@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Dione Castro Alves</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            min-height: 100vh;
+            margin: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: #00f2fe;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid #00f2fe;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .card a:hover {
+            background: #00f2fe;
+            color: #333;
+        }
+
+        .social-links {
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 10px;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="conteudo-dinamico">
+        <h1 style="text-align: center;">Bem-vindo ao Meu Portfólio</h1>
+        <p style="text-align: center;">Transformando ideias em soluções inovadoras com tecnologia.</p>
+    </div>
+
+    <script>
+        const conteudoDinamico = document.getElementById('conteudo-dinamico');
+
+        // Carrega os dados do JSON
+        fetch('./respostas.json')
+            .then(response => response.json())  // Corrigido para response.json()
+            .then(data => {
+                // Verifica se o arquivo JSON está estruturado corretamente
+                if (!Array.isArray(data)) {
+                    throw new Error('Formato de JSON inválido.');
+                }
+
+                // Cria os cards com base nos dados do JSON
+                data.forEach(item => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    if (item.type === 'about') {
+                        card.innerHTML = `
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                            <p>${item.additional_info}</p>
+                        `;
+                    } else if (item.type === 'project') {
+                        card.innerHTML = `
+                            <h3>${item.title}</h3>
+                            <p>${item.description}</p>
+                            <a href="${item.link}" target="_blank">Ver no GitHub</a>
+                        `;
+                    } else if (item.type === 'certification') {
+                        const certifications = item.certifications.map(cert => `<p>${cert}</p>`).join('');
+                        card.innerHTML = `
+                            <h3>${item.title}</h3>
+                            ${certifications}
+                        `;
+                    } else if (item.type === 'contact') {
+        const links = item.links.map(link => {
+            // Garante que os links de redes sociais ou e-mails sejam abertos corretamente
+            if (link.name.toLowerCase() === 'email') {
+                // Caso o link seja um e-mail, usa o 'mailto:'
+                return `<a href="mailto:${link.url}" target="_blank">${link.name}</a>`;
+            } else if (link.url.toLowerCase().includes('http')) {
+                // Se o link for uma URL válida, abre em uma nova aba
+                return `<a href="${link.url}" target="_blank">${link.name}</a>`;
+            } else {
+                // Fallback para caso o link não seja uma URL reconhecida
+                return `<a href="https://${link.url}" target="_blank">${link.name}</a>`;
+            }
+        }).join('');
+        
+        card.innerHTML = `
+            <h3>${item.title}</h3>
+            <div class="social-links">${links}</div>
+        `;
+    }
+                    conteudoDinamico.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao carregar o JSON:', error);
+                conteudoDinamico.innerHTML = '<p>Erro ao carregar os dados. Tente novamente mais tarde.</p>';
+            });
+    </script>
+</body>
+
+</html>
