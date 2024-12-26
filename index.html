@@ -1,4 +1,4 @@
-se <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -12,29 +12,46 @@ se <!DOCTYPE html>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-  #chatbot-floating-btn button:hover {
-        background: #00f2fe;
-    }
-        /* Estilos personalizados */
+        /* Estilos Globais */
         body {
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, #4facfe, #00f2fe);
-            min-height: 100vh;
             margin: 0;
-            padding: 20px;
             color: #fff;
+        }
+
+        nav ul {
             display: flex;
-            align-items: center;
             justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00f2fe;
         }
 
         .container {
             max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         h1, h2, p {
@@ -50,11 +67,49 @@ se <!DOCTYPE html>
             margin: 40px 0;
         }
 
-        .projects .project-card, .certifications ul li {
-            margin: 10px 0;
-            padding: 20px;
+        .project-card {
+            margin: 20px 0;
+            padding: 10px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
+            text-align: left;
+        }
+
+        .project-card button {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .project-card button:hover {
+            color: #00f2fe;
+        }
+
+        .description {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .description a {
+            color: #00f2fe;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .description a:hover {
+            text-decoration: underline;
         }
 
         .social-links a {
@@ -72,44 +127,99 @@ se <!DOCTYPE html>
             background: #fff;
             color: #333;
         }
+
+        button.scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #00f2fe;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none;
+        }
+
+        button.scroll-to-top:hover {
+            background: #4facfe;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .social-links a {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        .container {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#certifications">Certificações</a></li>
+            <li><a href="#social">Contato</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <img src="logo_portifolio.jpg" alt="Logo" style="width: 120px; border-radius: 50%; margin-bottom: 20px;">
         <h1>Bem-vindo ao Meu Portfólio</h1>
         <p>Transformando ideias em soluções inovadoras com tecnologia.</p>
 
-        <section class="about">
+        <section id="about" class="about">
             <h2>Sobre Mim</h2>
-            <p>Olá! Sou <strong>Dione Castro Alves</strong>, especialista em desenvolvimento de software, inovação tecnológica e soluções personalizadas.  
-                Como fundador da <strong>InNovaIdeia</strong>, ajudo empresas a alcançar seu máximo potencial por meio da tecnologia, oferecendo consultoria, treinamento e desenvolvimento de soluções que impactam.</p>
+            <p>Olá! Sou <strong>Dione Castro Alves</strong>, especialista em desenvolvimento de software, inovação tecnológica e soluções personalizadas. Como fundador da <strong>InNovaIdeia</strong>, ajudo empresas a alcançar seu máximo potencial por meio da tecnologia, oferecendo consultoria, treinamento e desenvolvimento de soluções que impactam.</p>
             <p>Tenho ampla experiência com tecnologias como Python, Flask, React, Docker e bancos de dados como SQLite e PostgreSQL. Também aplico inteligência artificial ao varejo, personalizando experiências e prevendo tendências. Meu objetivo é sempre oferecer soluções inovadoras e escaláveis que transformem ideias em realidade.</p>
         </section>
 
-        <section class="projects">
+        <section id="projects" class="projects">
             <h2>Meus Projetos</h2>
             <div class="project-card">
-                <h3>Gerenciador de funcionários</h3>
-                <p>Gerenciador de Dados dos Funcionários
-
-Este projeto é uma aplicação simples em Python que utiliza Tkinter para interface gráfica e SQLite3 para banco de dados. Ele permite criar uma tabela de funcionários, bem como adicionar novos registros de funcionários diretamente pela interface.</p>
-                <a href="https://github.com/Foxactive1/Projeto" target="_blank">Ver no GitHub</a>
+                <button onclick="toggleDescription(this)">Gerenciador de Funcionários</button>
+                <div class="description">
+                    <p>Gerenciador de Dados dos Funcionários em Python usando Tkinter e SQLite.</p>
+                    <a href="https://github.com/Foxactive1/Projeto" target="_blank">Ver no GitHub</a>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Sistema Bancário em Python</h3>
-                <p>Este é um projeto de um Sistema Bancário Simples desenvolvido em Python, que implementa funcionalidades básicas de gerenciamento de contas bancárias e usuários.</p>
-                <a href="https://github.com/Foxactive1/banco" target="_blank">Ver no GitHub</a>
+                <button onclick="toggleDescription(this)">Sistema Bancário em Python</button>
+                <div class="description">
+                    <p>Sistema Bancário Simples desenvolvido em Python para gerenciamento básico de contas.</p>
+                    <a href="https://github.com/Foxactive1/banco" target="_blank">Ver no GitHub</a>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Lista de tarefas em html</h3>
-                <p>Este projeto é uma aplicação web simples de Lista de Tarefas, construída utilizando HTML, CSS (com Bootstrap) e JavaScript. A aplicação permite adicionar tarefas, marcá-las como concluídas e removê-las de forma dinâmica.</p>
-                <a href="https://github.com/Foxactive1/HTML-E-CIA/tree/main/Lista_de_tarefas" target="_blank">Ver no GitHub</a>
+                <button onclick="toggleDescription(this)">Lista de Tarefas em HTML</button>
+                <div class="description">
+                    <p>Aplicação web simples de Lista de Tarefas, construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
+                    <a href="https://github.com/Foxactive1/HTML-E-CIA/tree/main/Lista_de_tarefas" target="_blank">Ver no GitHub</a>
+                </div>
             </div>
         </section>
 
-        <section class="certifications">
+        <section id="certifications" class="certifications">
             <h2>Certificações</h2>
             <ul>
                 <li>Certificação em Desenvolvimento Web - Coursera</li>
@@ -119,7 +229,7 @@ Este projeto é uma aplicação simples em Python que utiliza Tkinter para inter
             </ul>
         </section>
 
-        <section class="social-links">
+        <section id="social" class="social-links">
             <h2>Conecte-se Comigo</h2>
             <a href="https://www.linkedin.com/in/innovaideia2023" target="_blank">LinkedIn</a>
             <a href="mailto:innovaideia2023@gmail.com">E-mail</a>
@@ -128,6 +238,23 @@ Este projeto é uma aplicação simples em Python que utiliza Tkinter para inter
         </section>
     </div>
 
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        function toggleDescription(button) {
+            const description = button.nextElementSibling;
+            description.style.display = description.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', () => {
+            const button = document.querySelector('.scroll-to-top');
+            button.style.display = window.scrollY > 200 ? 'block' : 'none';
+        });
+    </script>
 </body>
 
 </html>
