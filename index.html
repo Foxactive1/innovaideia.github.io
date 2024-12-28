@@ -4,173 +4,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Portfólio - Dione Castro Alves</title>
     <meta property="og:title" content="Portfólio de Dione Castro Alves">
     <meta property="og:description" content="Transformando ideias em soluções inovadoras com tecnologia. Confira meus projetos, certificações e experiências.">
     <meta property="og:image" content="logo_portifolio.jpg">
-    <meta property="og:url" content="https://innovaideia-github-io.vercel.app">
+    <meta property="og:url" content="https://innovaideia-github-io.vercel.app/">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Estilos Globais */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            margin: 0;
-            color: #fff;
-        }
-
+<style>
+    /* Reset e Configurações Globais */
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #00bcd4, #3f51b5);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: #ffffff;
+    }
+    
+        /* Navegação */
         nav ul {
             display: flex;
             justify-content: center;
+            align-items: center; /* Centraliza verticalmente */
             list-style: none;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
             margin: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-
+        
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
-
+        
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
-            transition: color 0.3s;
+            padding: 10px 15px; /* Adiciona espaço interno */
+            border-radius: 5px; /* Suaviza as bordas */
+            transition: color 0.3s, background 0.3s;
         }
-
-        nav ul li a:hover {
-            color: #00f2fe;
+        
+            nav ul li a:hover {
+                color: #ffffff;
+                background-color: #ff4081;
+                transform: scale(1.1); /* Aumenta ligeiramente */
+            }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Alinha verticalmente em telas menores */
+            }
+            @media (max-width: 768px) {
+    nav ul li a {
+        padding: 8px 12px; /* Reduz espaço interno */
+        font-size: 14px;   /* Ajusta o tamanho da fonte */
+    }
+}
+        
+            nav ul li {
+                margin: 10px 0; /* Ajusta o espaçamento */
+            }
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        h1, h2, p {
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .projects, .certifications {
-            margin: 40px 0;
-        }
-
-        .project-card {
-            margin: 20px 0;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .project-card button {
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .project-card button:hover {
-            color: #00f2fe;
-        }
-
-        .description {
-            display: none;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 16px;
-            line-height: 1.6;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        .description a {
-            color: #00f2fe;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .description a:hover {
-            text-decoration: underline;
-        }
-
-        .social-links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            border: 1px solid #fff;
-            border-radius: 30px;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #fff;
-            color: #333;
-        }
-
+    
+    /* Container Principal */
+    .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    /* Tipografia */
+    h1, h2, p {
+        margin-bottom: 20px;
+    }
+    
+    .about p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    /* Projetos */
+    .projects, .certifications {
+        margin: 40px 0;
+    }
+    
+    .project-card {
+        margin: 20px 0;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-card button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .project-card button:hover {
+        color: #ff4081;
+    }
+    
+    .description {
+        display: none;
+        padding: 12px;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    .description a {
+        color: #ff4081;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .description a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Links Sociais */
+    .social-links a {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 22px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+        background: #ff4081;
+        color: #00bcd4;
+    }
+            
+        /* Botão Scroll to Top */
         button.scroll-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #00f2fe;
-            color: #fff;
+            background: #ff4081;
+            color: #ffffff; /* Mudado para branco para maior contraste */
             border: none;
             border-radius: 50%;
-            padding: 10px 15px;
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
             cursor: pointer;
-            display: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
         }
-
+        
+        button.scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
         button.scroll-to-top:hover {
-            background: #4facfe;
+            background: #3f51b5;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .social-links a {
-                padding: 10px;
-                font-size: 14px;
-            }
+    
+    /* Habilidades */
+    .skills {
+        margin: 40px 0;
+        text-align: center;
+    }
+    
+    .skills ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .skills li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+    }
+    
+    .skills li i {
+        font-size: 24px;
+        margin-right: 12px;
+        color: #ff4081;
+    }
+    
+    /* Animações */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
         }
-
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        body {
+            background: linear-gradient(135deg, #00bcd4, #3f51b5);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
         .container {
-            animation: fadeIn 1s ease-in-out;
+            padding: 20px;
+            margin: 20px 10px;
         }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+    
+        .social-links a {
+            padding: 12px;
+            font-size: 14px;
         }
-    </style>
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -180,6 +282,7 @@
             <li><a href="#projects">Projetos</a></li>
             <li><a href="#certifications">Certificações</a></li>
             <li><a href="#social">Contato</a></li>
+            <li><a href="#skills">Habilidades</a></li>
         </ul>
     </nav>
 
@@ -228,6 +331,32 @@
                 <li>Certificação de Empreendedorismo e Inovação - Sebrae</li>
             </ul>
         </section>
+        <section id="skills" class="skills">
+            <h2>Minhas Habilidades</h2>
+            <ul>
+                <li>
+                    <i class="bx bxl-python"></i> Python e Frameworks (Flask, Django)
+                </li>
+                <li>
+                    <i class="bx bxl-javascript"></i> JavaScript e Frameworks (React, Node.js)
+                </li>
+                <li>
+                    <i class="bx bxl-html5"></i> HTML5, CSS3 e Bootstrap
+                </li>
+                <li>
+                    <i class="bx bxs-data"></i> Bancos de Dados (SQLite, PostgreSQL, MySQL)
+                </li>
+                <li>
+                    <i class="bx bx-brain"></i> Inteligência Artificial e Machine Learning
+                </li>
+                <li>
+                    <i class="bx bxl-docker"></i> Docker e Virtualização
+                </li>
+                <li>
+                    <i class="bx bx-mobile"></i> Desenvolvimento Responsivo e UI/UX
+                </li>
+            </ul>
+        </section>
 
         <section id="social" class="social-links">
             <h2>Conecte-se Comigo</h2>
@@ -249,11 +378,16 @@
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+window.addEventListener('scroll', () => {
+    const button = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+        button.classList.add('show');
+    } else {
+        button.classList.remove('show');
+    }
+});
 
-        window.addEventListener('scroll', () => {
-            const button = document.querySelector('.scroll-to-top');
-            button.style.display = window.scrollY > 200 ? 'block' : 'none';
-        });
+
     </script>
 </body>
 
