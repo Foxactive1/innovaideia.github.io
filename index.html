@@ -322,41 +322,53 @@
             <p>Tenho ampla experiência com tecnologias como Python, Flask, React, Docker e bancos de dados como SQLite e PostgreSQL. Também aplico inteligência artificial ao varejo, personalizando experiências e prevendo tendências. Meu objetivo é sempre oferecer soluções inovadoras e escaláveis que transformem ideias em realidade.</p>
         </section>
 
-        <section id="projects" class="projects">
-            <h2>Meus Projetos</h2>
-            <div class="project-card">
-                <button onclick="toggleDescription(this)">Gerenciador de Funcionários</button>
-                <div class="description">
-                    <p>Gerenciador de Dados dos Funcionários em Python usando Tkinter e SQLite.</p>
-                    <a href="https://github.com/Foxactive1/Projeto" target="_blank">Ver no GitHub</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <button onclick="toggleDescription(this)">Sistema Bancário em Python</button>
-                <div class="description">
-                    <p>Sistema Bancário Simples desenvolvido em Python para gerenciamento básico de contas.</p>
-                    <a href="https://github.com/Foxactive1/banco" target="_blank">Ver no GitHub</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <button onclick="toggleDescription(this)">Lista de Tarefas em HTML</button>
-                <div class="description">
-                    <p>Aplicação web simples de Lista de Tarefas, construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
-                    <a href="https://github.com/Foxactive1/HTML-E-CIA/tree/main/Lista_de_tarefas" target="_blank">Ver no GitHub</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <button onclick="toggleDescription(this)">Knowledge-Base-API" target="_blank">Ver no GitHub</a>
-                </div></button>
-                <div class="description">
-                    Knowledge Base API
-Aplicação em Flask para consultar informações sobre linguagens de programação, com frontend responsivo e exemplos de código prático.
+<section id="projects" class="projects">
+    <h2>Meus Projetos</h2>
 
-</p>
-                    <a href="https://github.com/Foxactive1/Knowledge-Base-API" target="_blank">Ver no GitHub</a>
-                </div>
-            </div>
-        </section>
+    <div class="project-card">
+        <button onclick="toggleDescription(this)">Gerenciador de Funcionários</button>
+        <div class="description" style="display: none;">
+            <p>Gerenciador de Dados dos Funcionários em Python usando Tkinter e SQLite.</p>
+            <a href="https://github.com/Foxactive1/Projeto" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <button onclick="toggleDescription(this)">Sistema Bancário em Python</button>
+        <div class="description" style="display: none;">
+            <p>Sistema Bancário Simples desenvolvido em Python para gerenciamento básico de contas.</p>
+            <a href="https://github.com/Foxactive1/banco" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <button onclick="toggleDescription(this)">Lista de Tarefas em HTML</button>
+        <div class="description" style="display: none;">
+            <p>Aplicação web simples de Lista de Tarefas, construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
+            <a href="https://github.com/Foxactive1/HTML-E-CIA/tree/main/Lista_de_tarefas" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <button onclick="toggleDescription(this)">Knowledge-Base-API</button>
+        <div class="description" style="display: none;">
+            <p>Aplicação em Flask para consultar informações sobre linguagens de programação.</p>
+            <a href="https://github.com/Foxactive1/Knowledge-Base-API" target="_blank">Ver no GitHub</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Função para exibir ou ocultar a descrição
+    function toggleDescription(button) {
+        const description = button.nextElementSibling;
+        if (description.style.display === "none" || !description.style.display) {
+            description.style.display = "block";
+        } else {
+            description.style.display = "none";
+        }
+    }
+</script>
 
         <section id="certifications" class="certifications">
             <h2>Certificações</h2>
