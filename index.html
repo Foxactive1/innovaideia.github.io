@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Meta tags SEO aprimoradas -->
@@ -36,6 +36,8 @@
 <!-- Preload de recursos críticos -->
 <link rel="preload" href="logo_portifolio.jpg" as="image">
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css></noscript>
 <style>
     /* Reset e Configurações Globais */
     html, body {
@@ -85,6 +87,9 @@
                 background-color: #ff4081;
                 transform: scale(1.1); /* Aumenta ligeiramente */
             }
+            nav ul li a:focus {
+    outline: 3px solid #ff4081;
+}
         
         /* Responsividade */
         @media (max-width: 768px) {
