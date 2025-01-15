@@ -1,375 +1,502 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InNovaIdeia - Assessoria em Tecnologia</title>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tags SEO aprimoradas -->
+    <title>Dione Castro Alves - Desenvolvedor Full Stack & Especialista em Inovação</title>
+    <meta name="description" content="Portfólio profissional de Dione Castro Alves, especialista em desenvolvimento de software e soluções inovadoras em tecnologia. Confira projetos, certificações e experiência.">
+    <meta name="keywords" content="desenvolvimento web, python, react, inovação tecnológica, full stack developer, InNovaIdeia">
+    <meta name="author" content="Dione Castro Alves">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://innovaideia-github-io.vercel.app/">
+    
+    <!-- Open Graph com mais detalhes -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dione Castro Alves - Portfólio Profissional">
+    <meta property="og:description" content="Especialista em desenvolvimento de software e soluções inovadoras em tecnologia. Confira projetos, certificações e experiência.">
+    <meta property="og:image" content="https://innovaideia-github-io.vercel.app/logo_portifolio.jpg">
+    <meta property="og:url" content="https://innovaideia-github-io.vercel.app/">
+    <meta property="og:site_name" content="Portfólio Dione Castro">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dione Castro Alves - Portfólio Profissional">
+    <meta name="twitter:description" content="Especialista em desenvolvimento de software e soluções inovadoras em tecnologia.">
+    <meta name="twitter:image" content="https://innovaideia-github-io.vercel.app/logo_portifolio.jpg">
+    
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="logo_portifolio.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
 
-   <style>
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
+    <meta property="og:url" content="https://innovaideia-github-io.vercel.app/">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    /* Reset e Configurações Globais */
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
     }
-    .jumbotron {
-      background-color: #f8f9fa;
-      color: #333;
-      padding: 50px 25px;
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #00bcd4, #3f51b5);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: #ffffff;
     }
-    .footer {
-      background-color: #333;
-      color: white;
-      padding: 15px;
+    
+        /* Navegação */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centraliza verticalmente */
+            list-style: none;
+            padding: 15px 0;
+            margin: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 15px; /* Adiciona espaço interno */
+            border-radius: 5px; /* Suaviza as bordas */
+            transition: color 0.3s, background 0.3s;
+        }
+        
+            nav ul li a:hover {
+                color: #ffffff;
+                background-color: #ff4081;
+                transform: scale(1.1); /* Aumenta ligeiramente */
+            }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Alinha verticalmente em telas menores */
+            }
+            @media (max-width: 768px) {
+    nav ul li a {
+        padding: 8px 12px; /* Reduz espaço interno */
+        font-size: 14px;   /* Ajusta o tamanho da fonte */
     }
-    .section-title {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .values {
-      background-color: #f8f9fa;
-      padding: 30px 0;
-    }
-    /* Estilos do chatbot */
-    #chatbox {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 300px;
-      display: none;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      background-color: white;
-      z-index: 1000;
-    }
-    #chat-log {
-      height: 300px;
-      overflow-y: auto;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 10px;
-    }
-    #user-input {
-      width: calc(100% - 50px);
-      padding: 5px;
-      margin: 5px;
-    }
-    #send-btn {
-      margin: 5px;
-    }
-    .chat-toggle-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1001;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .modal-content {
-      background-color: white;
-      margin: 10% auto;
-      padding: 20px;
-      width: 80%;
-      max-width: 500px;
-    }
-    .close {
-      float: right;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-    .user-message {
-    background-color: #e1f7d5;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
-    text-align: right;
 }
-    .bot-message {
-    background-color: #d5f1ff;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
-    text-align: left;
+        
+            nav ul li {
+                margin: 10px 0; /* Ajusta o espaçamento */
+            }
+        }
+    
+    /* Container Principal */
+    .container {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    /* Tipografia */
+    h1, h2, p {
+        margin-bottom: 20px;
+    }
+    
+    .about p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    /* Projetos */
+    .projects, .certifications {
+        margin: 40px 0;
+    }
+    
+    .project-card {
+        margin: 20px 0;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project-card button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .project-card button:hover {
+        color: #ff4081;
+    }
+    
+    .description {
+        display: none;
+        padding: 12px;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.6;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+    .description a {
+        color: #ff4081;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .description a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Links Sociais */
+    .social-links a {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 22px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+        background: #ff4081;
+        color: #00bcd4;
+    }
+            
+        /* Botão Scroll to Top */
+        button.scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff4081;
+            color: #ffffff; /* Mudado para branco para maior contraste */
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        button.scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        button.scroll-to-top:hover {
+            background: #3f51b5;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+    
+    /* Habilidades */
+    .skills {
+        margin: 40px 0;
+        text-align: center;
+    }
+    
+    .skills ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .skills li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 18px;
+        margin: 10px 0;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: left;
+    }
+    
+    .skills li i {
+        font-size: 24px;
+        margin-right: 12px;
+        color: #ff4081;
+    }
+    
+    /* Animações */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        body {
+            background: linear-gradient(135deg, #00bcd4, #3f51b5);
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        .container {
+            padding: 20px;
+            margin: 20px 10px;
+        }
+    
+        .social-links a {
+            padding: 12px;
+            font-size: 14px;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+    }
+          /* Botão de Alternar Tema */
+        .theme-toggle {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 16px;
+        }
+        /* Botão de Alternar Tema */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1000;
 }
-  </style>
+
+.theme-toggle:hover {
+    background: #3f51b5;
+    transform: scale(1.1);
+}
+
+/* Estilo do tema claro */
+body.light-mode {
+    background: linear-gradient(to right, #ffffff, #e0e0e0);
+    color: #333;
+}
+
+body.light-mode nav ul {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .container {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .social-links a {
+    border-color: #333;
+    color: #333;
+}
+
+body.light-mode .social-links a:hover {
+    background: #3f51b5;
+    color: #ffffff;
+}
+</style>
 </head>
+
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#certifications">Certificações</a></li>
+            <li><a href="#social">Contato</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button></li>
+        </ul>
+    </nav>
 
-<!-- Cabeçalho e Navegação -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">InNovaIdeia</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Início <span class="sr-only">(atual)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#servicos">Serviços</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#sobre">Sobre Nós</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#valores">Valores</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-      </ul>
-    </div>
-  </div>
-</nav>
+    <div class="container">
+        <img src="logo_portifolio.jpg" alt="Logo" style="width: 120px; border-radius: 50%; margin-bottom: 20px;">
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+        <p>Transformando ideias em soluções inovadoras com tecnologia.</p>
 
-<!-- Seção de Apresentação -->
-<div class="jumbotron text-center">
-  <h1>Bem-vindo à InNovaIdeia</h1>
-  <p>Assessoria em Tecnologia para o Futuro dos Negócios</p>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalHistoria">Saiba Mais</button>
-</div>
+        <section id="about" class="about">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou <strong>Dione Castro Alves</strong>, especialista em desenvolvimento de software, inovação tecnológica e soluções personalizadas. Como fundador da <strong>InNovaIdeia</strong>, ajudo empresas a alcançar seu máximo potencial por meio da tecnologia, oferecendo consultoria, treinamento e desenvolvimento de soluções que impactam.</p>
+            <p>Tenho ampla experiência com tecnologias como Python, Flask, React, Docker e bancos de dados como SQLite e PostgreSQL. Também aplico inteligência artificial ao varejo, personalizando experiências e prevendo tendências. Meu objetivo é sempre oferecer soluções inovadoras e escaláveis que transformem ideias em realidade.</p>
+        </section>
 
-<!-- Modal -->
-<div id="modalHistoria" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Nossa História</h4>
-      </div>
-      <div class="modal-body">
-        <p>A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com ampla experiência em tecnologia desde 2009. Com conhecimentos em diversas linguagens de programação, como Java, JavaScript, Python e C, nossa equipe está pronta para enfrentar os desafios do mercado digital.</p>
-        <p>Ao longo dos anos, a InNovaIdeia se destacou por sua abordagem personalizada, proporcionando soluções inovadoras para empresas de diversos segmentos. Nosso objetivo é sempre entregar a melhor experiência tecnológica, alinhada às necessidades dos nossos clientes.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <section id="projects" class="projects">
+            <h2>Meus Projetos</h2>
+            <div class="project-card">
+                <button onclick="toggleDescription(this)">Gerenciador de Funcionários</button>
+                <div class="description">
+                    <p>Gerenciador de Dados dos Funcionários em Python usando Tkinter e SQLite.</p>
+                    <a href="https://github.com/Foxactive1/Projeto" target="_blank">Ver no GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <button onclick="toggleDescription(this)">Sistema Bancário em Python</button>
+                <div class="description">
+                    <p>Sistema Bancário Simples desenvolvido em Python para gerenciamento básico de contas.</p>
+                    <a href="https://github.com/Foxactive1/banco" target="_blank">Ver no GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <button onclick="toggleDescription(this)">Lista de Tarefas em HTML</button>
+                <div class="description">
+                    <p>Aplicação web simples de Lista de Tarefas, construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
+                    <a href="https://github.com/Foxactive1/HTML-E-CIA/tree/main/Lista_de_tarefas" target="_blank">Ver no GitHub</a>
+                    
+               </div>
+            </div>
+            
+                <div class="project-card">
+                   <button onclick="toggleDescription(this)">Puzzle numérico</button>
+                <div class="description">
+                    <p>Jogo Puzzle de números  construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
+                    <a href="https://github.com/Foxactive1/2048_puzzle" target="_blank">Ver no GitHub</a>
 
-<!-- Seção de Serviços -->
-<div class="container-fluid" id="servicos">
-  <div class="section-title">
-    <h2>Serviços</h2>
-    <p>Na InNovaIdeia, proporcionamos soluções tecnológicas inovadoras e personalizadas, projetadas para acelerar a transformação digital da sua empresa, otimizar processos e impulsionar resultados estratégicos.</p>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Consultoria em TI Estratégica</h3>
-      <p>Conte com nossos especialistas para transformar sua infraestrutura de TI em um diferencial competitivo. Alinhamos estratégias tecnológicas às metas do seu negócio, otimizamos processos e garantimos uma gestão eficiente e sustentável dos recursos digitais.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Desenvolvimento de Software Sob Medida</h3>
-      <p>Criamos softwares personalizados, projetados para resolver desafios únicos do seu negócio. Nossas soluções aliam inovação, escalabilidade e eficiência, proporcionando vantagem competitiva e otimizando seus processos operacionais.</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Treinamentos e Capacitações Tecnológicas</h3>
-      <p>Oferecemos programas de treinamento e workshops práticos em tecnologias emergentes, como inteligência artificial, engenharia de prompt e automação. Capacite sua equipe para dominar ferramentas inovadoras e enfrentar os desafios digitais com confiança e competência.</p>
-    </div>
-  </div>
-</div>
+                </div>
+            </div>
+            
+            
+            <div class="project-card">
+                 <button onclick="toggleDescription(this)">NumpuzAli</button>
+                <div class="description">
+                    <p>Jogo Puzzle de números  construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
+                    <a href="https://github.com/Foxactive1/2048_puzzle" target="_blank">Ver no GitHub</a>
 
-<!-- Seção Sobre Nós -->
-<div class="container-fluid" id="sobre">
-  <div class="section-title">
-    <h2>Sobre Nós</h2>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <h3>Nossa História</h3>
-      <p>A InNovaIdeia foi fundada por Dione Castro Alves, um profissional com mais de 15 anos de experiência em tecnologia. Com expertise em diversas linguagens de programação, incluindo Java, JavaScript, Python e C, nossa equipe está preparada para enfrentar os desafios do mercado digital e entregar soluções inovadoras e de alto impacto.</p>
-    </div>
-    <div class="col-sm-6">
-      <h3>Nossa Missão</h3>
-      <p>Transformar desafios em oportunidades por meio de soluções inovadoras e sustentáveis, impulsionando o crescimento e a competitividade dos nossos clientes no ambiente digital e além.</p>
-    </div>
-  </div>
-  <div class="row" style="margin-top: 30px;">
-    <div class="col-sm-6">
-      <h3>Nosso Diferencial</h3>
-      <p>Combinamos nossa experiência técnica com uma abordagem personalizada para cada cliente. Nosso objetivo é oferecer soluções tecnológicas que impulsionem o sucesso dos negócios, sempre utilizando as melhores práticas do mercado.</p>
-    </div>
-    <div class="col-sm-6">
-      <h3>Equipe Especializada</h3>
-      <p>Contamos com uma equipe de especialistas em diversas áreas, prontos para oferecer consultoria e suporte em todas as etapas dos projetos. Estamos sempre atualizados com as mais recentes tecnologias e metodologias de desenvolvimento.</p>
-    </div>
-  </div>
-</div>
+                </div>
+            </div>
+        </section>
 
-<!-- Seção de Valores -->
-<div class="container-fluid values" id="valores">
-  <div class="section-title">
-    <h2>Nossos Valores</h2>
-    <p>Na InNovaIdeia, nossos valores são a base sólida que sustenta cada ação e decisão. Eles nos guiam em todos os projetos, assegurando não apenas resultados de qualidade, mas também relações transparentes e de confiança com nossos clientes e parceiros.</p>
-  </div>
-  <div class="row">
-    <div class="col-sm-3 text-center">
-      <h4>Inovação</h4>
-      <p>Estimulamos a criatividade em todos os processos e buscamos incessantemente soluções inovadoras que não apenas atendam, mas superem as necessidades e expectativas de nossos clientes, gerando valor real e duradouro.</p>
+        <section id="certifications" class="certifications">
+            <h2>Certificações</h2>
+            <ul>
+                <li>Certificação em Desenvolvimento Web - Coursera</li>
+                <li>Certificação em Inteligência Artificial - edX</li>
+                <li>Cursos Avançados em Python e Flask - Alura e Udemy</li>
+                <li>Certificação de Empreendedorismo e Inovação - Sebrae</li>
+            </ul>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Minhas Habilidades</h2>
+            <ul>
+                <li>
+                    <i class="bx bxl-python"></i> Python e Frameworks (Flask, Django)
+                </li>
+                <li>
+                    <i class="bx bxl-javascript"></i> JavaScript e Frameworks (React, Node.js)
+                </li>
+                <li>
+                    <i class="bx bxl-html5"></i> HTML5, CSS3 e Bootstrap
+                </li>
+                <li>
+                    <i class="bx bxs-data"></i> Bancos de Dados (SQLite, PostgreSQL, MySQL)
+                </li>
+                <li>
+                    <i class="bx bx-brain"></i> Inteligência Artificial e Machine Learning
+                </li>
+                <li>
+                    <i class="bx bxl-docker"></i> Docker e Virtualização
+                </li>
+                <li>
+                    <i class="bx bx-mobile"></i> Desenvolvimento Responsivo e UI/UX
+                </li>
+            </ul>
+        </section>
+
+        <section id="social" class="social-links">
+            <h2>Conecte-se Comigo</h2>
+            <a href="https://www.linkedin.com/in/innovaideia2023" target="_blank">LinkedIn</a>
+            <a href="mailto:innovaideia2023@gmail.com">E-mail</a>
+            <a href="https://github.com/Foxactive1/" target="_blank">GitHub</a>
+            <a href="https://wa.me/5516993117529" target="_blank">WhatsApp</a>
+        </section>
     </div>
-    <div class="col-sm-3 text-center">
-      <h4>Transparência</h4>
-      <p>Agimos com total honestidade e clareza em todas as interações, garantindo comunicação aberta e transparente. Isso nos permite construir relações de confiança mútua, baseadas em respeito e comprometimento com os interesses de nossos clientes e parceiros.</p>
-    </div>
-    <div class="col-sm-3 text-center">
-      <h4>Comprometimento</h4>
-      <p>Nos dedicamos incansavelmente ao sucesso de nossos clientes, cumprindo prazos rigorosamente e oferecendo soluções personalizadas que geram valor real e sustentável para seus negócios.</p>
-    </div>
-    <div class="col-sm-3 text-center">
-      <h4>Excelência</h4>
-      <p>Nos dedicamos à excelência em todos os processos, personalizando cada solução para garantir que os resultados não apenas atendam, mas realmente superem as necessidades e expectativas dos nossos clientes, criando um impacto positivo e duradouro em seus negócios.</p>
-    </div>
-  </div>
-</div>
 
-<!-- Botão para abrir o modal -->
-<div class="jumbotron text-center">
-  <button id="openModalBtn" class="btn btn-primary" data-toggle="modal" data-target="#trabalheModal">Trabalhe Conosco</button>
-</div>
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
 
-<!-- Modal Trabalhe Conosco -->
-<div class="modal fade" id="trabalheModal" tabindex="-1" role="dialog" aria-labelledby="trabalheModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="trabalheModalLabel">Trabalhe Conosco</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Estamos procurando por talentos que compartilhem nossa visão de inovação e excelência.</p>
-        <form action="https://example.com/submit_application" method="POST" enctype="multipart/form-data">
-          <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" class="form-control" id="nome" name="nome" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="cargo">Cargo de Interesse:</label>
-            <select class="form-control" id="cargo" name="cargo" required>
-              <option value="">Selecione</option>
-              <option value="desenvolvedor">Desenvolvedor</option>
-              <option value="designer">Designer</option>
-              <option value="consultor">Consultor</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="curriculo">Currículo (PDF):</label>
-            <input type="file" class="form-control-file" id="curriculo" name="curriculo" accept=".pdf" required>
-          </div>
-          <button type="submit" class="btn btn-success">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+    <script>
+        function toggleDescription(button) {
+            const description = button.nextElementSibling;
+            description.style.display = description.style.display === 'block' ? 'none' : 'block';
+        }
 
-<!-- Informações de contato -->
-<div class="container">
-  <section class="contact-info">
-    <h2 class="section-title">Contato</h2>
-    <p>Para mais informações, entre em contato conosco:</p>
-    <p>Telefone: (16) 99311-7529</p>
-    <p>E-mail: innovaideia2023@gmail.com</p>
-  </section>
-</div>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+window.addEventListener('scroll', () => {
+    const button = document.querySelector('.scroll-to-top');
+    if (window.scrollY > 200) {
+        button.classList.add('show');
+    } else {
+        button.classList.remove('show');
+    }
+});
+   function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+});
 
-<!-- Botão para abrir o modal de contato -->
-<div class="jumbotron text-center">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
-    Fale Conosco
-  </button>
-</div>
 
-<!-- Modal de Contato -->
-<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="contactModalLabel">Formulário de Contato</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="https://example.com/submit_form" method="POST">
-          <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem:</label>
-            <textarea class="form-control" id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Botão para abrir/fechar o chatbot -->
-<button class="chat-toggle-btn" id="toggle-chat-btn">💬</button>
-
-<!-- Modal do chatbot -->
-<div id="chatModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Chatbot InNovaIdeia</h4>
-      </div>
-      <div class="modal-body">
-        <div id="chat-log"></div>
-        <input type="text" id="user-input" placeholder="Digite sua mensagem aqui...">
-        <button id="send-btn" class="btn btn-primary">Enviar</button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="footer text-center">
-  <p>&copy; 2024 InNovaIdeia. Todos os direitos reservados.</p>
-</footer>
-
-<!-- JavaScript -->
-<script src="chatbot.js"></script>
-
+    </script>
 </body>
+
 </html>
