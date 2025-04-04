@@ -4,62 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta tags SEO aprimoradas -->
+
+    <!-- SEO aprimorado -->
     <title>Dione Castro Alves - Desenvolvedor Full Stack & Especialista em Inovação</title>
     <meta name="description" content="Portfólio profissional de Dione Castro Alves, especialista em desenvolvimento de software e soluções inovadoras em tecnologia. Confira projetos, certificações e experiência.">
     <meta name="keywords" content="desenvolvimento web, python, react, inovação tecnológica, full stack developer, InNovaIdeia">
     <meta name="author" content="Dione Castro Alves">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://innovaideia-github-io.vercel.app/">
-    
-    <!-- Open Graph com mais detalhes -->
+    <meta name="theme-color" content="#3f51b5">
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Dione Castro Alves - Portfólio Profissional">
     <meta property="og:description" content="Especialista em desenvolvimento de software e soluções inovadoras em tecnologia. Confira projetos, certificações e experiência.">
     <meta property="og:image" content="https://innovaideia-github-io.vercel.app/logo_portifolio.jpg">
     <meta property="og:url" content="https://innovaideia-github-io.vercel.app/">
     <meta property="og:site_name" content="Portfólio Dione Castro">
-    
-    <!-- Twitter Cards -->
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dione Castro Alves - Portfólio Profissional">
     <meta name="twitter:description" content="Especialista em desenvolvimento de software e soluções inovadoras em tecnologia.">
     <meta name="twitter:image" content="https://innovaideia-github-io.vercel.app/logo_portifolio.jpg">
-    
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Preload de recursos críticos -->
-    <link rel="preload" href="logo_portifolio.jpg" as="image">
+    <!-- Fonts e Ícones -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
-
-    <meta property="og:url" content="https://innovaideia-github-io.vercel.app/">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    <link rel="preload" href="logo_portifolio.jpg" as="image">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-    /* Reset e Configurações Globais */
-    html, body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        width: 100%;
-        overflow-x: hidden;
-    }
-    
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to right, #00bcd4, #3f51b5);
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        color: #ffffff;
-    }
-    
-        /* Navegação */
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #00bcd4, #3f51b5);
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: #ffffff;
+        }
+
         nav ul {
             display: flex;
             justify-content: center;
-            align-items: center; /* Centraliza verticalmente */
+            align-items: center;
             list-style: none;
             padding: 15px 0;
             margin: 0;
@@ -67,296 +65,122 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
-        
+
         nav ul li {
             margin: 0 20px;
         }
-        
+
         nav ul li a {
             text-decoration: none;
             color: #ffffff;
             font-weight: bold;
-            padding: 10px 15px; /* Adiciona espaço interno */
-            border-radius: 5px; /* Suaviza as bordas */
-            transition: color 0.3s, background 0.3s;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.3s, background 0.3s, transform 0.2s;
         }
-        
-            nav ul li a:hover {
-                color: #ffffff;
-                background-color: #ff4081;
-                transform: scale(1.1); /* Aumenta ligeiramente */
-            }
-        
-        /* Responsividade */
+
+        nav ul li a:hover {
+            color: #ffffff;
+            background-color: #ff4081;
+            transform: scale(1.1);
+        }
+
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column; /* Alinha verticalmente em telas menores */
+                flex-direction: column;
             }
-            @media (max-width: 768px) {
-    nav ul li a {
-        padding: 8px 12px; /* Reduz espaço interno */
-        font-size: 14px;   /* Ajusta o tamanho da fonte */
-    }
-}
-        
+
             nav ul li {
-                margin: 10px 0; /* Ajusta o espaçamento */
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                padding: 8px 12px;
+                font-size: 14px;
             }
         }
-    
-    /* Container Principal */
-    .container {
-        position: relative;
-        z-index: 1;
-        max-width: 1200px;
-        margin: 40px auto;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        animation: fadeIn 1s ease-in-out;
-    }
-    
-    /* Tipografia */
-    h1, h2, p {
-        margin-bottom: 20px;
-    }
-    
-    .about p {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-    
-    /* Projetos */
-    .projects, .certifications {
-        margin: 40px 0;
-    }
-    
-    .project-card {
-        margin: 20px 0;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        text-align: left;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    
-    .project-card button {
-        width: 100%;
-        text-align: left;
-        background: none;
-        border: none;
-        color: #ffffff;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    
-    .project-card button:hover {
-        color: #ff4081;
-    }
-    
-    .description {
-        display: none;
-        padding: 12px;
-        margin-top: 10px;
-        font-size: 16px;
-        line-height: 1.6;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 5px;
-    }
-    
-    .description a {
-        color: #ff4081;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    .description a:hover {
-        text-decoration: underline;
-    }
-    
-    /* Links Sociais */
-    .social-links a {
-        display: inline-block;
-        margin: 10px;
-        padding: 12px 22px;
-        border: 1px solid #fff;
-        border-radius: 30px;
-        color: #ffffff;
-        text-decoration: none;
-        transition: all 0.3s;
-    }
-    
-    .social-links a:hover {
-        background: #ff4081;
-        color: #00bcd4;
-    }
-            
-        /* Botão Scroll to Top */
-        button.scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #ff4081;
-            color: #ffffff; /* Mudado para branco para maior contraste */
-            border: none;
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        button.scroll-to-top.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        button.scroll-to-top:hover {
-            background: #3f51b5;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-    
-    /* Habilidades */
-    .skills {
-        margin: 40px 0;
-        text-align: center;
-    }
-    
-    .skills ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .skills li {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        font-size: 18px;
-        margin: 10px 0;
-        padding: 12px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: left;
-    }
-    
-    .skills li i {
-        font-size: 24px;
-        margin-right: 12px;
-        color: #ff4081;
-    }
-    
-    /* Animações */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Media Queries */
-    @media (max-width: 768px) {
-        body {
-            background: linear-gradient(135deg, #00bcd4, #3f51b5);
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        
+
         .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 40px auto;
             padding: 20px;
-            margin: 20px 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-in-out;
         }
-    
-        .social-links a {
-            padding: 12px;
-            font-size: 14px;
+
+        h1, h2, p {
+            margin-bottom: 20px;
         }
-        
-        nav ul li {
-            margin: 0 10px;
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
         }
-    }
-          /* Botão de Alternar Tema */
-        .theme-toggle {
-            cursor: pointer;
-            border: none;
+
+        .projects, .certifications {
+            margin: 40px 0;
+        }
+
+        .project-card {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card button {
+            width: 100%;
+            text-align: left;
             background: none;
-            font-size: 16px;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
-        /* Botão de Alternar Tema */
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #ff4081;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.3s;
-    z-index: 1000;
-}
 
-.theme-toggle:hover {
-    background: #3f51b5;
-    transform: scale(1.1);
-}
+        .project-card button:hover {
+            color: #ff4081;
+        }
 
-/* Estilo do tema claro */
-body.light-mode {
-    background: linear-gradient(to right, #ffffff, #e0e0e0);
-    color: #333;
-}
+        .description {
+            display: none;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
 
-body.light-mode nav ul {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-body.light-mode .container {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-body.light-mode .social-links a {
-    border-color: #333;
-    color: #333;
-}
-
-body.light-mode .social-links a:hover {
-    background: #3f51b5;
-    color: #ffffff;
-}
-</style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Aqui você pode adicionar o conteúdo como navbar, seções etc. -->
+</body>
+</html>
     <nav>
         <ul>
             <li><a href="#about">Sobre</a></li>
