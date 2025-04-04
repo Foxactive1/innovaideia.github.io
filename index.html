@@ -174,6 +174,36 @@
                 transform: translateY(0);
             }
         }
+/* Tema escuro */
+.dark-theme {
+    background: linear-gradient(to right, #1c1c1c, #333333);
+    color: #ffffff;
+}
+
+.dark-theme nav ul {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme nav ul li a:hover {
+    background-color: #ff4081;
+}
+
+/* Botão de tema */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
     </style>
 </head>
 
@@ -323,12 +353,21 @@ window.addEventListener('scroll', () => {
     }
 });
    function toggleTheme() {
-            document.body.classList.toggle('dark-theme');
-        }
-        document.querySelector('.theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-});
+        const body = document.body;
+        body.classList.toggle('dark-theme');
 
+        // Armazena a escolha no localStorage
+        const isDark = body.classList.contains('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    // Ao carregar a página, aplica o tema salvo
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    });
 
     </script>
 </body>
