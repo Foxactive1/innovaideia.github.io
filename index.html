@@ -37,179 +37,189 @@
     <link rel="preload" href="logo_portifolio.jpg" as="image">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            width: 100%;
-            overflow-x: hidden;
-        }
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        background: linear-gradient(to right, #00bcd4, #3f51b5);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        transition: background 0.3s ease;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #00bcd4, #3f51b5);
-            background-attachment: fixed;
-            background-size: 100% 100%;
-            color: #ffffff;
-        }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 15px 0;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
 
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: color 0.3s, background 0.3s, transform 0.2s;
+    }
+
+    nav ul li a:hover {
+        color: #ffffff;
+        background-color: #ff4081;
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
         nav ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-            padding: 15px 0;
-            margin: 0;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            flex-direction: column;
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 10px 0;
         }
 
         nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: color 0.3s, background 0.3s, transform 0.2s;
+            padding: 8px 12px;
+            font-size: 14px;
         }
+    }
 
-        nav ul li a:hover {
-            color: #ffffff;
-            background-color: #ff4081;
-            transform: scale(1.1);
+    .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h1, h2, p {
+        margin-bottom: 20px;
+    }
+
+    .project-card {
+        margin: 20px 0;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card button {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .project-card button:hover {
+        color: #ff4081;
+    }
+
+    /* Animação da descrição (corrigida) */
+    .description {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0 12px;
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 5px;
+        transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease, margin 0.3s ease;
+    }
+
+    .description.content-visible {
+        max-height: 500px;
+        opacity: 1;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+    /* Ícone rotativo */
+    .toggle-icon {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    button[aria-expanded="true"] .toggle-icon {
+        transform: rotate(180deg);
+    }
+
+    /* Tema escuro */
+    .dark-theme {
+        background: linear-gradient(to right, #1c1c1c, #333333);
+        color: #ffffff;
+    }
+
+    .dark-theme nav ul {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .dark-theme nav ul li a:hover {
+        background-color: #ff4081;
+    }
+
+    /* Botão de tema */
+    #theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ff4081;
+        color: #fff;
+        border: none;
+        padding: 12px 16px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
         }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            nav ul li a {
-                padding: 8px 12px;
-                font-size: 14px;
-            }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
-
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        h1, h2, p {
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .projects, .certifications {
-            margin: 40px 0;
-        }
-
-        .project-card {
-            margin: 20px 0;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            text-align: left;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card button {
-            width: 100%;
-            text-align: left;
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            padding: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .project-card button:hover {
-            color: #ff4081;
-        }
-
-        .description {
-            display: none;
-            padding: 12px;
-            margin-top: 10px;
-            font-size: 16px;
-            line-height: 1.6;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-/* Tema escuro */
-.dark-theme {
-    background: linear-gradient(to right, #1c1c1c, #333333);
-    color: #ffffff;
-}
-
-.dark-theme nav ul {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.dark-theme nav ul li a:hover {
-    background-color: #ff4081;
-}
-
-/* Botão de tema */
-#theme-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff4081;
-    color: #fff;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
-
-    </style>
+    }
+</style>
 </head>
 
 <body>
-    <!-- Aqui você pode adicionar o conteúdo como navbar, seções etc. -->
-</body>
+
 </html>
     <nav>
         <ul>
@@ -235,34 +245,47 @@
 
         <section id="projects" class="projects">
             <h2>Meus Projetos</h2>
-
-<div class="project-card">
-    <button onclick="toggleDescription(this)" aria-expanded="false">
-        Conversão de Bases Numéricas
-    </button>
-    <div class="description" hidden>
-        <p>Conversor de bases numéricas: Decimal, Binário, Octal e Hexadecimal.</p>
-        <a href="https://conversao-numeros.vercel.app" target="_blank" rel="noopener noreferrer">
-            Acesse o Projeto
-        </a>
-    </div>
-</div>
+                <div class="project-card">
+                    <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        Conversão de Bases Numéricas
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="description content-hidden">
+                        <p>Conversor de bases numéricas: Decimal, Binário, Octal e Hexadecimal.</p>
+                        <a href="https://conversao-numeros.vercel.app" target="_blank" rel="noopener noreferrer">
+                            Acesse o Projeto
+                        </a>
+                    </div>
+                </div>
             <div class="project-card">
-                <button onclick="toggleDescription(this)">Gerenciador de Funcionários</button>
+                
+                    <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        Gerenciador de Funcionários
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
                 <div class="description">
                     <p>Gerenciador de Dados dos Funcionários em Python usando Tkinter e SQLite.</p>
                     <a href="https://github.com/Foxactive1/Projeto" target="_blank">Ver no GitHub</a>
                 </div>
             </div>
             <div class="project-card">
-                <button onclick="toggleDescription(this)">Sistema Bancário em Python</button>
+             
+                    <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        Sistema Bancário em Python
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
+                
                 <div class="description">
                     <p>Sistema Bancário Simples desenvolvido em Python para gerenciamento básico de contas.</p>
                     <a href="https://github.com/Foxactive1/banco" target="_blank">Ver no GitHub</a>
                 </div>
             </div>
             <div class="project-card">
-                <button onclick="toggleDescription(this)">Lista de Tarefas em HTML</button>
+                                    <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        Lista de Tarefas em HTML
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
+                    
                 <div class="description">
                     <p>Aplicação web simples de Lista de Tarefas, construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
                     <a href="https://github.com/Foxactive1/HTML-E-CIA/tree/main/Lista_de_tarefas" target="_blank">Ver no GitHub</a>
@@ -271,7 +294,11 @@
             </div>
             
                 <div class="project-card">
-                   <button onclick="toggleDescription(this)">Puzzle numérico</button>
+                   <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        Puzzle numérico
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
+                   
                 <div class="description">
                     <p>Jogo Puzzle de números  construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
                     <a href="https://github.com/Foxactive1/2048_puzzle" target="_blank">Ver no GitHub</a>
@@ -281,7 +308,11 @@
             
             
             <div class="project-card">
-                 <button onclick="toggleDescription(this)">NumpuzAli</button>
+                       <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        NumpuzAli
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
+            
                 <div class="description">
                     <p>Jogo Puzzle de números  construída utilizando HTML, CSS (com Bootstrap) e JavaScript.</p>
                     <a href="https://github.com/Foxactive1/Numpuzali" target="_blank">Ver no GitHub</a>
@@ -289,7 +320,10 @@
                 </div>
             </div>
             <div class="project-card">
-                <button onclick="toggleDescription(this)">Jogo_Da_Velha</button>
+                     <button class="toggle-btn" onclick="toggleDescription(this)" aria-expanded="false">
+                        Jogo_Da_Velha
+                        <i class="bx bx-chevron-down toggle-icon"></i>
+                    </button>
                <div class="description">
                    <p>Este é um projeto de Jogo da Velha (Tic-Tac-Toe) desenvolvido em Python</p>
                    <a href="https://github.com/Foxactive1/JogoDaVelha" target="_blank">Ver no GitHub</a>
@@ -349,10 +383,17 @@
 
     <script>
         function toggleDescription(button) {
-            const description = button.nextElementSibling;
-            description.style.display = description.style.display === 'block' ? 'none' : 'block';
-        }
+    const description = button.nextElementSibling;
+    const isVisible = description.classList.contains("content-visible");
 
+    button.setAttribute("aria-expanded", String(!isVisible));
+
+    if (isVisible) {
+        description.classList.remove("content-visible");
+    } else {
+        description.classList.add("content-visible");
+    }
+}
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
