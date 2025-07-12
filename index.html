@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,7 +55,7 @@
             background-attachment: fixed;
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
-            line-height: 1.6;
+            line-height: 1.7;
             transition: var(--transition);
             overflow-x: hidden;
         }
@@ -75,7 +74,7 @@
         }
 
         h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             line-height: 1.2;
             background: var(--gradient-secondary);
             -webkit-background-clip: text;
@@ -85,7 +84,7 @@
         }
 
         h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             position: relative;
             display: inline-block;
             margin-bottom: 2.5rem;
@@ -103,7 +102,7 @@
         }
 
         p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
             font-size: 1.1rem;
         }
 
@@ -125,6 +124,14 @@
 
         section {
             padding: 5rem 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Navegação */
@@ -161,6 +168,7 @@
             align-items: center;
             font-weight: 700;
             font-size: 1.4rem;
+            z-index: 1001;
         }
 
         .logo i {
@@ -219,6 +227,16 @@
         .theme-toggle:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(247, 37, 133, 0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--light);
+            cursor: pointer;
+            z-index: 1001;
         }
 
         /* Hero Section */
@@ -754,8 +772,34 @@
         }
 
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: rgba(30, 30, 46, 0.95);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .nav-links a {
+                font-size: 1.2rem;
             }
             
             .hero {
@@ -808,6 +852,9 @@
                 <i class='bx bx-code-alt'></i>
                 <span>Dione Castro</span>
             </a>
+            <button class="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#about"><i class='bx bx-user'></i> Sobre</a></li>
                 <li><a href="#skills"><i class='bx bx-code-block'></i> Habilidades</a></li>
@@ -1381,6 +1428,21 @@
     </div>
 
     <script>
+        // Menu mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Fechar o menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
         // Toggle theme
         function toggleTheme() {
             document.body.classList.toggle('dark-theme');
@@ -1399,6 +1461,20 @@
                 document.body.classList.add('dark-theme');
                 document.querySelector('.theme-toggle i').className = 'bx bx-sun';
             }
+            
+            // Inicializar animações de scroll
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
         
         // Scroll para o topo
